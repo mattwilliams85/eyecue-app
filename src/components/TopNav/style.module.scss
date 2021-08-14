@@ -1,0 +1,49 @@
+.topnav {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1275px;
+}
+
+.flexWrap {
+  align-items: center;
+  display: flex;
+}
+
+.contact {
+  color: #f73b79;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navItem {
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  margin-left: 70px;
+
+  &::after {
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    margin: 0px 8px 0 15px;
+    position: relative;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    width: 4px;
+  }
+}
+
+.outerWrap {
+  background-color: black;
+  height: 80px;
+  width: 100%;
+}

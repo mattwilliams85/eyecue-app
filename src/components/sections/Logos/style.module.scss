@@ -1,0 +1,27 @@
+@import '~styles/mixins';
+
+.container {
+  background: white;
+  fill: white;
+  height: 785px;
+  position: relative;
+}
+
+.layout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1275px;
+}
+
+.header {
+  @include header;
+  padding-top: 40px;
+}
+
+.subheader {
+  @include subheader;
+  margin-top: 18px;
+  width: 750px;
+}

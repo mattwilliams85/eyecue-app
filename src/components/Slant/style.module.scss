@@ -1,0 +1,19 @@
+.slant {
+  height: 210px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(-210px);
+  width: 100%;
+  z-index: 1;
+
+  &.bottom {
+    bottom: -420px;
+    top: initial;
+    transform: translateY(-210px);
+  }
+
+  polygon {
+    fill: inherit;
+  }
+}

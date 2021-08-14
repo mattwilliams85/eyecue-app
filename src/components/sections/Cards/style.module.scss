@@ -1,0 +1,29 @@
+@import '~styles/mixins';
+
+.container {
+  background: #f7f9fc;
+  fill: #f7f9fc;
+  height: 1370px;
+  position: relative;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: 1275px;
+  text-align: left;
+}
+
+.topic {
+  @include topic;
+  padding-top: 155px;
+}
+
+.header {
+  @include header;
+  max-width: 500px;
+}
+
+.subheader {
+  @include subheader;
+  max-width: 750px;
+}

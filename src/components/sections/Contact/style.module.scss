@@ -1,0 +1,36 @@
+@import '~styles/mixins.scss';
+
+.container {
+  background: url('~images/test.png');
+  height: 615px;
+  position: relative;
+}
+
+.layout {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1275px;
+}
+
+.header {
+  @include header;
+  color: white;
+  margin-bottom: 40px;
+  padding-top: 315px;
+}
+
+.button {
+  align-items: center;
+  border: 2px solid white;
+  display: flex;
+  font-size: 14px;
+  font-weight: 900;
+  height: 38px;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 210px;
+}

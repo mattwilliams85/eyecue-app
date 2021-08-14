@@ -1,0 +1,35 @@
+@import '~styles/mixins';
+
+.container {
+  background: url('~images/texture_bg.png');
+  color: white;
+  height: 1285px;
+  position: relative;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: 1275px;
+  padding-top: 235px;
+  text-align: left;
+}
+
+.block {
+  margin-bottom: 90px;
+}
+
+.topic {
+  @include topic;
+  text-transform: uppercase;
+}
+
+.header {
+  @include header;
+}
+
+.body {
+  color: white;
+  line-height: 24px;
+  margin-bottom: 30px;
+  width: 680px;
+}
