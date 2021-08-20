@@ -1,9 +1,10 @@
 @import '~styles/mixins';
+@import '~styles/variables';
 
 .container {
   background: white;
   fill: white;
-  height: 785px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -11,8 +12,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 1275px;
+  @include layout;
 }
 
 .header {
@@ -23,5 +23,25 @@
 .subheader {
   @include subheader;
   margin-top: 18px;
-  width: 750px;
+  max-width: 780px;
+}
+
+.logos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 120px;
+  max-width: $container-width;
+
+  img {
+    margin: 0 100px 70px;
+    max-width: 100px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .logos {
+    justify-content: space-between;
+  }
 }

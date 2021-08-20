@@ -1,3 +1,5 @@
+@import '~styles/variables';
+
 @mixin overlay() {
   animation: fadeIn 0.3s forwards;
   background-color: rgba(0, 0, 0, 0.3);
@@ -19,7 +21,7 @@
 }
 
 @mixin header() {
-  font-family: bebas-neue-pro-expanded, sans-serif;
+  font-family: $title;
   font-size: 48px;
   font-weight: 700;
   line-height: 44px;
@@ -29,4 +31,52 @@
 @mixin subheader() {
   font-size: 24px;
   font-weight: 300;
+}
+
+@mixin layout {
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 20px;
+}
+
+@mixin learnButton($width: 210px) {
+  align-items: center;
+  border: 2px solid white;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 900;
+  height: 38px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  width: $width;
+  z-index: 1;
+
+  &:before {
+    background: #37474f;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    width: 150%;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: black;
+  }
+
+  &:hover::before {
+    background-color: white;
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
 }

@@ -1,15 +1,14 @@
 @import '~styles/mixins';
 
 .container {
-  background: url('~images/texture_bg.png');
+  background: url('~images/texture_bg.png') #f7f9fc;
   color: white;
   height: 1285px;
   position: relative;
 }
 
 .layout {
-  margin: 0 auto;
-  max-width: 1275px;
+  @include layout;
   padding-top: 235px;
   text-align: left;
 }
@@ -31,5 +30,5 @@
   color: white;
   line-height: 24px;
   margin-bottom: 30px;
-  width: 680px;
+  max-width: 680px;
 }

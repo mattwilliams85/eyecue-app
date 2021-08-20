@@ -1,10 +1,24 @@
+@import '~styles/variables';
+
+.outerWrap {
+  background-color: black;
+  height: 80px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
 .topnav {
   align-items: center;
+  background-color: black;
   display: flex;
   height: 100%;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1275px;
+  padding: 0 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .flexWrap {
@@ -13,7 +27,8 @@
 }
 
 .contact {
-  color: #f73b79;
+  color: $magenta;
+  cursor: pointer;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -36,14 +51,12 @@
     height: 4px;
     margin: 0px 8px 0 15px;
     position: relative;
-    -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
+    transition: all 0.15s ease-in-out;
     width: 4px;
   }
-}
 
-.outerWrap {
-  background-color: black;
-  height: 80px;
-  width: 100%;
+  &.active::after {
+    transform: rotate(-45deg);
+  }
 }

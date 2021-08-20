@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './style.module.scss';
-import Slant from 'components/Slant';
 
 function Choose() {
   return (
@@ -64,7 +63,6 @@ function Choose() {
           </div>
         </div>
       </div>
-      <Slant bottom />
     </div>
   );
 }

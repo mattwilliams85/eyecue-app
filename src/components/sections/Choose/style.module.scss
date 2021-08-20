@@ -3,30 +3,24 @@
 .container {
   background: white;
   fill: white;
-  height: 840px;
+  padding-bottom: 140px;
   position: relative;
 }
 
 .layout {
-  margin: 0 auto;
-  max-width: 1275px;
+  @include layout;
 }
 
 .row {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   text-align: left;
 }
 
 .block {
-  background-image: linear-gradient(#efefef 33%, rgba(255,255,255,0) 0%);
-  background-position: right;
-  background-repeat: repeat-y;
-  background-size: 2px 10px;
-  height: 675px;
-  padding-right: 24px;
   padding-top: 80px;
-  width: 260px;
+  width: 360px;
 
   &:last-child {
     background-image: none;
@@ -56,9 +50,44 @@
 }
 
 .learnmore {
+  cursor: pointer;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.1em;
   margin-top: 30px;
   text-transform: uppercase;
+}
+
+@media (min-width: $screen-sm-min) {
+  .block {
+    width: 260px;
+  }
+
+  .row {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .container {
+    padding-bottom: 0;
+  }
+
+  .block {
+    background-image: linear-gradient(#efefef 33%, rgba(255,255,255,0) 0%);
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 2px 10px;
+    height: 675px;
+    padding-right: 24px;
+  }
+
+  .row {
+    max-width: none;
+  }
 }

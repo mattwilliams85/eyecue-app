@@ -2,14 +2,16 @@
 
 .container {
   background: #f7f9fc;
+  background-image: url(~images/cloud-bg.jpg);
+  background-position: 150% 60%;
+  background-repeat: no-repeat;
   fill: #f7f9fc;
-  height: 1370px;
+  padding-bottom: 100px;
   position: relative;
 }
 
 .layout {
-  margin: 0 auto;
-  max-width: 1275px;
+  @include layout;
   text-align: left;
 }
 
@@ -26,4 +28,79 @@
 .subheader {
   @include subheader;
   max-width: 750px;
+}
+
+.cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.card {
+  background: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 8px 8px 0px 0px #dbdbdb;
+  color: white;
+  display: flex;
+  height: 600px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 385px;
+
+  &::after {
+    background-image: linear-gradient(180deg, rgba(255,0,0,0), #282828);
+    bottom: 0;
+    content: '';
+    height: 420px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:hover img {
+    transform: scale(1.1)
+  }
+
+  img {
+    position: absolute;
+    transform: scale(1);
+    transition: transform 1s;
+  }
+}
+
+.group {
+  align-self: flex-end;
+  padding: 35px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.company {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subject {
+  font-family: $title;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+
+.button {
+  @include learnButton(180px)
+}
+
+@media (min-width: $screen-sm-min) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    margin-right: 20px;
+  }
 }

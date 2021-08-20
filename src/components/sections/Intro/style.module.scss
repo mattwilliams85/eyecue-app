@@ -1,4 +1,5 @@
 @import '~styles/mixins';
+@import '~styles/variables';
 
 .container {
   background: url('~images/texture_bg2.png');
@@ -9,18 +10,21 @@
 }
 
 .layout {
-  margin: 0 auto;
-  max-width: 1275px;
+  @include layout;
 }
 
 .header {
-  font-family: bebas-neue-pro-expanded, sans-serif;
+  font-family: $title;
   font-size: 100px;
   font-weight: 700;
   line-height: 100px;
   max-width: 200px;
-  padding-top: 200px;
   text-transform: uppercase;
+}
+
+.intro {
+  display: flex;
+  padding-top: 200px;
 }
 
 .subheader {
@@ -28,4 +32,71 @@
   margin-top: 30px;
   max-width: 600px;
   text-align: left;
+}
+
+.phones {
+  position: relative;
+}
+
+.phone {
+  left: 0;
+  position: absolute;
+  top: 0;
+
+  &:last-child {
+    left: 250px;
+    top: 60px;
+  }
+}
+
+.barGroup {
+  display: flex;
+}
+
+.progressBar {
+  background-color: #777;
+  height: 2px;
+  margin-right: 5px;
+  margin-top: 80px;
+  position: relative;
+  transition: background-color 0s;
+  width: 80px;
+
+  &:first-child {
+    width: 185px;
+  }
+
+  &.active {
+    background: #fff;
+    transition: background-color 0.3s;
+  }
+}
+
+.progressBarInner {
+  background-color: $magenta;
+  height: 2px;
+  position: absolute;
+  transition: none;
+  width: 0px;
+}
+
+.active .progressBarInner {
+  animation: progress 5s linear forwards;
+}
+
+.active:first-child .progressBarInner {
+  animation: progress 10s linear forwards;
+}
+
+.barTitle {
+  color: $magenta;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
 }
