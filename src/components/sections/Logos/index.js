@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
+import classnames from 'classnames';
 
 import logoBd from 'images/logo-bd.png';
 import logoEdf from 'images/logo-edf.png';
@@ -10,9 +11,13 @@ import logoKnox from 'images/logo-knox.png';
 import logoPowur from 'images/logo-powur.png';
 import logoNike from 'images/logo-nike.png';
 
-function Logos() {
+function Logos({ withPadding }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={classnames(styles.container, {
+        [styles.withPadding]: withPadding
+      })}
+    >
       <div className={styles.layout}>
         <div className={styles.header}>Innovation is in our DNA</div>
         <div className={styles.subheader}>

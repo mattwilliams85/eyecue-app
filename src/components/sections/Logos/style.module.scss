@@ -40,6 +40,10 @@
   }
 }
 
+.withPadding {
+  padding-top: 140px;
+}
+
 @media (min-width: $screen-sm-min) {
   .logos {
     justify-content: space-between;

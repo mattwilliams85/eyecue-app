@@ -10,6 +10,7 @@
 .summary {
   color: #282728;
   display: flex;
+  flex-direction: column;
   font-size: 24px;
   font-weight: 300;
   justify-content: space-between;
@@ -23,9 +24,11 @@
   font-family: $title;
   font-size: 48px;
   font-weight: 700;
-  height: 140px;
+  height: 100%;
   line-height: 48px;
+  margin-bottom: 40px;
   max-width: 550px;
+  min-width: 250px;
   -webkit-text-fill-color: transparent;
 }
 
@@ -35,8 +38,9 @@
 
 .listWrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .header {
@@ -47,9 +51,39 @@
   text-transform: uppercase;
 }
 
+.list {
+  margin-bottom: 40px;
+}
+
 .list li {
   color: #282728;
   list-style-type: none;
   margin-bottom: 15px;
   padding: 0;
+}
+
+@media (min-width: $screen-sm-min) {
+  .summary {
+    flex-direction: row;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .body {
+    padding-left: 20px;
+  }
+
+  .listWrapper {
+    flex-direction: row;
+    padding-top: 150px;
+  }
+
+  .list {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $screen-md-min) {
 }

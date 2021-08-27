@@ -15,7 +15,7 @@ function Home() {
       <Intro />
       <Logos />
       <Cards />
-      <Summary />
+      <Summary backgroundColor={'f7f9fc'} />
       <Choose />
       <Contact />
       <Footer />

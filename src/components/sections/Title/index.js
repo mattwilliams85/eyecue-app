@@ -1,21 +1,20 @@
 import React from 'react';
 import styles from './style.module.scss';
 
-function Title() {
+function Title({ background, topic, title, subheader }) {
   return (
     <div className={styles.container}>
+      <img
+        className={styles.containerBackground}
+        src={background}
+        alt="background"
+      />
       <div className={styles.layout}>
         <div className={styles.main}>
           <div>
-            <div className={styles.topic}>For Angel-backend Startups</div>
-            <div className={styles.header}>
-              100% Coverage from Concept to Launch
-            </div>
-            <div className={styles.subheader}>
-              Whether it’s usability/design guidance for tech founders, or a
-              complete launch solution for non-tech founders, we’ve got you
-              covered.
-            </div>
+            <div className={styles.topic}>{topic}</div>
+            <div className={styles.header}>{title}</div>
+            <div className={styles.subheader}>{subheader}</div>
           </div>
         </div>
       </div>

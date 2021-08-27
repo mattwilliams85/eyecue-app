@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './style.module.scss';
 
-function Summary() {
+function Summary({ backgroundColor }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ backgroundColor: `#${backgroundColor}` }}
+    >
       <div className={styles.layout}>
         <div className={styles.block}>
           <div className={styles.topic}>eyecue promises</div>

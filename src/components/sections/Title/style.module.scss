@@ -2,30 +2,37 @@
 @import '~styles/variables';
 
 .container {
-  background-image: url('~images/texture_bg3.jpg');
+  color: white;
+  position: relative;
+  text-align: left;
+}
+
+.containerBackground {
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
-  height: 840px;
-  text-align: left;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
 }
 
 .layout {
   @include layout;
+  position: relative;
 }
 
 .header {
   font-family: $title;
-  font-size: 100px;
+  font-size: 50px;
   font-weight: 700;
-  line-height: 95px;
+  line-height: 50px;
   max-width: 650px;
   text-transform: uppercase;
 }
 
 .main {
   display: flex;
-  padding-top: 200px;
+  padding: 200px 0;
 }
 
 .subheader {
@@ -44,7 +51,19 @@
 
 @media (min-width: $screen-sm-min) {
   .container {
-    background-image: url('~images/title_bg1.jpg');
+    height: 840px;
+  }
+
+  .containerBackground {
     background-position: 0 -21px;
+  }
+
+  .header {
+    font-size: 100px;
+    line-height: 95px;
+  }
+
+  .main {
+    padding: 200px 0 0;
   }
 }

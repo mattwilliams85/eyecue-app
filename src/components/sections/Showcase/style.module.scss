@@ -2,31 +2,92 @@
 @import '~styles/variables';
 
 .container {
-  // background-image: url('~images/texture_bg4.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   color: white;
+  padding: 200px 0 250px;
+  position: relative;
 }
 
 .layout {
   @include layout;
-  padding-bottom: 130px;
+  padding-bottom: 220px;
+  position: relative;
   text-align: left;
 }
 
 .topic {
   @include topic();
+  font-weight: bold;
+}
+
+.topWrap {
+  display: flex;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.titleWrap {
+  max-width: 570px;
 }
 
 .title {
   @include header();
 }
 
-.topic {
+.subheader {
   @include subheader();
 }
 
-.bodyWrapp {
+.bodyWrap {
+  column-gap: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.textBlock {
+  line-height: 26px;
+  max-width: 400px;
+}
+
+
+.tabletImg {
+  display: none;
+  position: absolute;
+  top: -320px;
+}
+
+.containerBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: $screen-sm-min) {
+  .tabletImg {
+    display: block;
+    left: 650px;
+  }
+
+  .bodyWrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .topWrap {
+    padding-bottom: 150px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .tabletImg {
+    right: 0;
+  }
+
+  .layout {
+    padding-bottom: 130px;
+  }
 }
