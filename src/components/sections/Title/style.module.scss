@@ -1,0 +1,50 @@
+@import '~styles/mixins';
+@import '~styles/variables';
+
+.container {
+  background-image: url('~images/texture_bg3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 840px;
+  text-align: left;
+}
+
+.layout {
+  @include layout;
+}
+
+.header {
+  font-family: $title;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 95px;
+  max-width: 650px;
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  padding-top: 200px;
+}
+
+.subheader {
+  @include subheader;
+  margin-top: 30px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.topic {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+@media (min-width: $screen-sm-min) {
+  .container {
+    background-image: url('~images/title_bg1.jpg');
+    background-position: 0 -21px;
+  }
+}

@@ -35,7 +35,7 @@
   max-width: $container-width;
 
   img {
-    margin: 0 100px 70px;
+    margin: 0 40px 70px;
     max-width: 100px;
   }
 }
@@ -43,5 +43,9 @@
 @media (min-width: $screen-sm-min) {
   .logos {
     justify-content: space-between;
+
+    img {
+      margin: 0 100px 70px;
+    }
   }
 }

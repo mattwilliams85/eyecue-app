@@ -1,0 +1,32 @@
+@import '~styles/mixins';
+@import '~styles/variables';
+
+.container {
+  // background-image: url('~images/texture_bg4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.layout {
+  @include layout;
+  padding-bottom: 130px;
+  text-align: left;
+}
+
+.topic {
+  @include topic();
+}
+
+.title {
+  @include header();
+}
+
+.topic {
+  @include subheader();
+}
+
+.bodyWrapp {
+  display: flex;
+  justify-content: space-between;
+}

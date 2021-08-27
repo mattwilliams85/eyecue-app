@@ -2,9 +2,9 @@
 @import '~styles/variables';
 
 .container {
-  background: url('~images/texture_bg2.png');
-  background-position: 0 -21px;
+  background-image: url('~images/texture_bg3.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   height: 1070px;
 }
@@ -35,6 +35,7 @@
 }
 
 .phones {
+  display: none;
   position: relative;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .barGroup {
-  display: flex;
+  display: none;
 }
 
 .progressBar {
@@ -98,5 +99,21 @@
 @keyframes progress {
   to {
     width: 100%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .container {
+    background-image: url('~images/texture_bg2.png');
+    background-position: 0 -21px;
+  }
+
+  .phones {
+    display: block;
+    position: relative;
+  }
+
+  .barGroup {
+    display: flex;
   }
 }
