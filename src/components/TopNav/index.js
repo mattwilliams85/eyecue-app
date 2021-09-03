@@ -57,10 +57,30 @@ function TopNav() {
           </div>
         </div>
       </div>
-      <Dropdown activeNavItem={activeNavItem} copy={COPY.innovation} id={1} />
-      <Dropdown activeNavItem={activeNavItem} copy={COPY.innovation} id={2} />
-      <Dropdown activeNavItem={activeNavItem} copy={COPY.innovation} id={3} />
-      <Dropdown activeNavItem={activeNavItem} copy={COPY.innovation} id={4} />
+      <Dropdown
+        activeNavItem={activeNavItem}
+        setActiveNavItem={setActiveNavItem}
+        copy={COPY.innovation}
+        id={1}
+      />
+      <Dropdown
+        activeNavItem={activeNavItem}
+        setActiveNavItem={setActiveNavItem}
+        copy={COPY.innovation}
+        id={2}
+      />
+      <Dropdown
+        activeNavItem={activeNavItem}
+        setActiveNavItem={setActiveNavItem}
+        copy={COPY.innovation}
+        id={3}
+      />
+      <Dropdown
+        activeNavItem={activeNavItem}
+        setActiveNavItem={setActiveNavItem}
+        copy={COPY.innovation}
+        id={4}
+      />
     </>
   );
 }

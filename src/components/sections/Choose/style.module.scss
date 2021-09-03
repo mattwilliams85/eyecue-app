@@ -15,6 +15,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  position: relative;
   text-align: left;
 }
 
@@ -89,5 +90,23 @@
 
   .row {
     max-width: none;
+
+    &::after {
+      background: linear-gradient(white, transparent);
+      content: '';
+      height: 100px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &::before {
+      background: linear-gradient(transparent, white);
+      bottom: 0;
+      content: '';
+      height: 200px;
+      position: absolute;
+      width: 100%;
+    }
   }
 }
