@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 
 import phone1 from 'images/phone-powur-1.png';
 import phone2 from 'images/phone-powur-2.png';
-import laptop from 'images/laptop_1.png';
+
 function Intro() {
   const [activeBar, setActiveBar] = useState(1);
   const defaultSpringProps = {
@@ -45,7 +45,7 @@ function Intro() {
       },
       activeBar === 1 ? 10000 : 5000
     );
-  }, [activeBar]);
+  }, [activeBar]); // eslint-disable-line
 
   return (
     <div className={styles.container}>
