@@ -3,7 +3,7 @@ import TopNav from 'components/TopNav';
 import Title from 'components/sections/Title';
 import LeftRightLeft from 'components/sections/LeftRightLeft';
 import Summary from 'components/sections/Summary';
-import Logos from 'components/sections/Logos';
+import Choose from 'components/sections/Choose';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
@@ -22,7 +22,7 @@ function Startup() {
       />
       <LeftRightLeft />
       <Summary backgroundColor={'efefef'} />
-      <Logos withPadding />
+      <Choose />
       <Contact />
       <Footer />
     </>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.scss';
 
@@ -56,28 +57,36 @@ function Dropdown(props) {
                 <div className={styles.linkHeader}>{copy.title1}</div>
                 <div className={styles.linkBody}>{copy.body1}</div>
               </div>
-              <div className={styles.button}>learn more</div>
+              <Link className={styles.button} to="/angel-backend-startups">
+                learn more
+              </Link>
             </div>
             <div className={styles.linkBlock}>
               <div>
                 <div className={styles.linkHeader}>{copy.title2}</div>
                 <div className={styles.linkBody}>{copy.body2}</div>
               </div>
-              <div className={styles.button}>learn more</div>
+              <Link className={styles.button} to="/enterprise-intrapreneur">
+                learn more
+              </Link>
             </div>
             <div className={styles.linkBlock}>
               <div>
                 <div className={styles.linkHeader}>{copy.title3}</div>
                 <div className={styles.linkBody}>{copy.body3}</div>
               </div>
-              <div className={styles.button}>learn more</div>
+              <Link className={styles.button} to="/process">
+                learn more
+              </Link>
             </div>
             <div className={styles.linkBlock}>
               <div>
                 <div className={styles.linkHeader}>{copy.title4}</div>
                 <div className={styles.linkBody}>{copy.body4}</div>
               </div>
-              <div className={styles.button}>learn more</div>
+              <Link className={styles.button} to="/">
+                learn more
+              </Link>
             </div>
           </div>
         </div>

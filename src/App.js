@@ -11,9 +11,6 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
           <Route path="/angel-backed-startups">
             <Startup />
           </Route>
@@ -23,6 +20,7 @@ function App() {
           <Route path="/process">
             <Process />
           </Route>
+          <Home />
         </Switch>
       </Router>
     </div>

@@ -34,20 +34,34 @@
   text-align: left;
 }
 
-.phones {
+.devices {
   display: none;
   position: relative;
+  transform: translateY(0)
 }
 
-.phone {
+
+.device {
   left: 0;
   position: absolute;
   top: 0;
+}
 
-  &:last-child {
-    left: 250px;
-    top: 60px;
-  }
+.phone {
+  left: 250px;
+  top: 60px;
+}
+
+.laptop {
+  left: -25px;
+  top: 50px;
+  width: 800px;
+}
+
+.tablet {
+  left: 50px;
+  top: -100px;
+  width: 700px;
 }
 
 .barGroup {
@@ -108,7 +122,7 @@
     background-position: 0 -21px;
   }
 
-  .phones {
+  .devices {
     display: block;
     position: relative;
   }
