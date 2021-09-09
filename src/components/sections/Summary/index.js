@@ -5,7 +5,7 @@ function Summary({ backgroundColor }) {
   return (
     <div
       className={styles.container}
-      style={{ backgroundColor: `#${backgroundColor}` }}
+      // style={{ backgroundColor: `#${backgroundColor}` }}
     >
       <div className={styles.layout}>
         <div className={styles.block}>

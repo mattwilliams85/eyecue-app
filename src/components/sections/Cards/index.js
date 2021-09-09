@@ -7,15 +7,15 @@ import deviceFlowjo from 'images/device-flowjo.png';
 function Cards() {
   return (
     <div className={styles.container}>
-      <div className={styles.background} />
       <div className={styles.layout}>
         <div className={styles.topic}>case studies</div>
         <div className={styles.header}>
-          Connect the Dots Between Usability & Technology
+          Connect the Dots Between Usability &amp; Technology
         </div>
         <div className={styles.subheader}>
           See how we leverage AI, digital product development and user-first
           design to transform how these industries work.
+        </div>
         </div>
         <div className={styles.cards}>
           <div className={styles.card}>
@@ -53,7 +53,6 @@ function Cards() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
