@@ -9,47 +9,48 @@ import Choose from 'components/sections/Choose';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
-import TitleBg from 'images/title_bg2.jpg';
-import ShowcaseDevice from 'images/laptop_1.png';
+import TitleBg from 'images/title_bg5.jpg';
+import ShowcaseDevice from 'images/tablet_2.png';
 import ShowcaseBackground from 'images/texture_bg5.png';
 import { SHOWCASE_COPY } from 'copy';
 
-function Intrapreneur() {
+function Explore() {
   return (
     <>
       <TopNav />
       <Title
         background={TitleBg}
-        topic={'For Enterprise Intrapreneurs'}
-        title={'Take Your Productivity to New Heights'}
+        topic={'FOR INNOVATION DIRECTORS & OFFICERS'}
+        title={'Pioneer New Industry Standards'}
         subheader={
-          'Unify all data sources, automate internal workflow, eliminate human error, and maximize your realtime output.'
+          'Push the boundaries of your industry by ushering new innovation using Data Science, Artificial Intelligence, and IoT.'
         }
       />
       <Listables
-        title={'The longer you wait to modernize your tools, the worse it gets'}
-        copy={SHOWCASE_COPY.listables.intrapreneur}
+        title={'Start a Relationship with Your Future Target Market, Now'}
+        copy={SHOWCASE_COPY.listables.explore}
         gradient={{
-          color1: 'edc97c',
-          color2: 'f7db41'
+          color1: 'ee5ca4',
+          color2: 'f49e38'
         }}
       />
       <Showcase
-        title={`When Salesforce Clone Just Isn't Good Enough`}
-        subheader={`How one indsutry leader consolidate internal legacy data sources and built an Order Management system that truly fit their needs.`}
+        title={`How AI reduced Research Time from 2 Years to 20 seconds`}
+        subheader={`EyeCue transforms years of scientific research experience into seconds with artificial intelligence.`}
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}
         deviceStyles={{
-          top: '-130px',
-          width: '750px',
-          left: '550px'
+          top: '-150px',
+          width: '550px',
+          left: '750px'
         }}
+        deviceTop={'-130px'}
         darkMode
-        copy={SHOWCASE_COPY.showcase.intrapreneur}
+        copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2
-        author={'James Kidwell'}
-        company={'FlowJo, Director of Sales'}
+        author={'Howie Seay'}
+        company={'BD, Senior Product Manager'}
       />
       <Summary />
       <Choose />
@@ -59,4 +60,4 @@ function Intrapreneur() {
   );
 }
 
-export default Intrapreneur;
+export default Explore;

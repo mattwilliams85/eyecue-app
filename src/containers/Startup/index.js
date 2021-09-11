@@ -27,6 +27,7 @@ function Startup() {
           covered.`}
       />
       <Listables
+        copy={SHOWCASE_COPY.listables.startup}
         title={
           'A Successful Startup Team is Far More than the Sum of its Parts'
         }
@@ -41,7 +42,7 @@ function Startup() {
         won over future customers and investors.`}
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}
-        copy={SHOWCASE_COPY.startup}
+        copy={SHOWCASE_COPY.showcase.startup}
       />
       <Screenshots />
       <Summary />

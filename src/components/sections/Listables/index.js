@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './style.module.scss';
 
-function Listables({ title, gradient = {} }) {
+function Listables({ title, copy, gradient = {} }) {
+  function createMarkup(message) {
+    return { __html: message };
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
@@ -15,22 +19,10 @@ function Listables({ title, gradient = {} }) {
             >
               {title}
             </div>
-            <div className={styles.body}>
-              Seasoned serial entrepreneurs always recruit the same people time
-              and time again to recreate that same magic.
-              <br />
-              <br />
-              Over the last 8 years, EyeCue’s entrepreneur-first culture has
-              fostered the perfect environment to incubate innovation teams that
-              embody this very unique startup spark, and has consistently
-              launched some of the most successful startups.
-              <br />
-              <br />
-              The key ingredient to unlocking the explosive excitment and
-              progress in early startup phase lies in this perfect alignment of
-              experience, personality and capabilities amongst the core members
-              of your team.
-            </div>
+            <div
+              className={styles.body}
+              dangerouslySetInnerHTML={createMarkup(copy.copy)}
+            ></div>
           </div>
           <div className={styles.listWrapper}>
             <div className={styles.list}>

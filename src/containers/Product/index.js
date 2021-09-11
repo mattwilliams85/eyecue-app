@@ -9,34 +9,34 @@ import Choose from 'components/sections/Choose';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
-import TitleBg from 'images/title_bg2.jpg';
+import TitleBg from 'images/title_bg6.jpg';
 import ShowcaseDevice from 'images/laptop_1.png';
 import ShowcaseBackground from 'images/texture_bg5.png';
 import { SHOWCASE_COPY } from 'copy';
 
-function Intrapreneur() {
+function Product() {
   return (
     <>
       <TopNav />
       <Title
         background={TitleBg}
-        topic={'For Enterprise Intrapreneurs'}
-        title={'Take Your Productivity to New Heights'}
+        topic={'FOR BUSINESS & PRODUCT OWNERS'}
+        title={'SEIZE NEW MARKET SEGMENTS'}
         subheader={
-          'Unify all data sources, automate internal workflow, eliminate human error, and maximize your realtime output.'
+          'Build on exiting customer success, and launch into untapped opportunities by capturing the imagination of the new market segment'
         }
       />
       <Listables
-        title={'The longer you wait to modernize your tools, the worse it gets'}
-        copy={SHOWCASE_COPY.listables.intrapreneur}
+        title={'Innovation is a Shortcut to Convert an User into a Champion'}
+        copy={SHOWCASE_COPY.listables.product}
         gradient={{
-          color1: 'edc97c',
-          color2: 'f7db41'
+          color1: 'f4d527',
+          color2: 'fbaf72'
         }}
       />
       <Showcase
-        title={`When Salesforce Clone Just Isn't Good Enough`}
-        subheader={`How one indsutry leader consolidate internal legacy data sources and built an Order Management system that truly fit their needs.`}
+        title={`Making the First-in-Class Upgrades for the First Responders `}
+        subheader={`EyeCue consolidates internal legacy data sources and built an Order Management system that truly fit their needs.`}
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}
         deviceStyles={{
@@ -44,8 +44,7 @@ function Intrapreneur() {
           width: '750px',
           left: '550px'
         }}
-        darkMode
-        copy={SHOWCASE_COPY.showcase.intrapreneur}
+        copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2
         author={'James Kidwell'}
@@ -59,4 +58,4 @@ function Intrapreneur() {
   );
 }
 
-export default Intrapreneur;
+export default Product;

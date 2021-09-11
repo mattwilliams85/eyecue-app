@@ -80,3 +80,9 @@
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   }
 }
+
+@mixin gradient($color1, $color2) {
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, $color1, $color2);
+  -webkit-text-fill-color: transparent;
+}

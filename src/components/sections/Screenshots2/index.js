@@ -7,7 +7,7 @@ import page2 from 'images/screenshot_5.png';
 import page3 from 'images/screenshot_6.png';
 import pageFade from 'images/screenshot_fade.png';
 
-function Contact() {
+function Screenshots2({ company, author }) {
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
@@ -38,12 +38,12 @@ function Contact() {
             comparisons between the legacy system and Hub. Going to be mind
             blowing.
           </div>
-          <div className={styles}>James Kidwell</div>
-          <div className={styles}>FlowJo, Director of Sales</div>
+          <div className={styles}>{author}</div>
+          <div className={styles}>{company}</div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Contact;
+export default Screenshots2;

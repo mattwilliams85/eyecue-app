@@ -1,0 +1,87 @@
+@import '~styles/mixins';
+@import '~styles/variables';
+
+.container {
+  background: white;
+  fill: white;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.layout {
+  @include layout;
+  display: flex;
+  flex-direction: column;
+  padding-top: 140px;
+}
+
+.gradient {
+  @include gradient(#5c96d8, #595cc5)
+}
+
+.topic {
+  @include topic;
+}
+
+.header {
+  @include header;
+
+  font-size: 100px;
+  line-height: 107px;
+}
+
+.subheader {
+  @include header;
+  font-size: 36px;
+  line-height: 48px;
+  max-width: 420px;
+  padding-top: 50px;
+}
+
+.block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:last-child {
+    background-image: none;
+  }
+}
+
+.icons {
+  align-items: center;
+  color: #9e9e9e;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 750px;
+  padding-top: 120px;
+
+  img {
+    height: 50px;
+    margin-bottom: 16px;
+    object-fit: contain;
+    width: 100px;
+  }
+}
+
+.label {
+  margin-bottom: 20px;
+}
+
+.iconGroup {
+  margin-bottom: 120px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.withPadding {
+  padding-top: 140px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .layout {
+    flex-direction: row;
+  }
+}

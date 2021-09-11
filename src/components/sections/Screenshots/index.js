@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import page1 from 'images/page_1.png';
 import page2 from 'images/page_2.png';
 
-function Contact() {
+function Screenshots() {
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
@@ -33,4 +33,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Screenshots;

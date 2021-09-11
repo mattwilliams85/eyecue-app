@@ -35,7 +35,6 @@ function Intro() {
   const [springProps4, setSpringProps4] = useSpring(() => defaultSpringProps);
 
   useEffect(() => {
-    console.log(activeBar);
     setTimeout(
       () => {
         activeBar === 4 ? setActiveBar(0) : setActiveBar(activeBar + 1);
@@ -63,7 +62,7 @@ function Intro() {
 
   useEffect(() => {
     setSpringProps1(enterSpringProps);
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <div className={styles.container}>

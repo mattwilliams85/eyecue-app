@@ -1,0 +1,69 @@
+@import '~styles/mixins';
+
+.container {
+  background: #efefef;
+  height: 800px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.layout {
+  @include layout;
+  padding-top: 170px;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  flex: 50%;
+  gap: 150px;
+  margin-bottom: 75px;
+}
+
+.title {
+  @include header;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, #5c96d8, #595cc5 90%);
+  line-height: 50px;
+  -webkit-text-fill-color: transparent;
+}
+
+.body {
+  color: #595959;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 43%;
+
+  &.right {
+    left: initial;
+    right: 0;
+  }
+}
+
+.fill {
+  min-width: 43%;
+
+  &.left {
+    order: 1;
+  }
+}
+
+.moreDetails {
+  cursor: pointer;
+  text-transform: uppercase;
+
+  img {
+    margin-left: 8px;
+    margin-top: 75px;
+  }
+}
