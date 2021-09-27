@@ -2,7 +2,12 @@ import React from 'react';
 import styles from './style.module.scss';
 import classnames from 'classnames';
 
-import iconNlp from 'images/icon-nlp.png';
+import iconNlp from 'images/NLP.svg';
+import iconData from 'images/data_collection.svg';
+import iconVision from 'images/computer_vision.svg';
+import iconForecast from 'images/forecasting_predictions.svg';
+import iconCluster from 'images/cluster-analysis.svg';
+import iconCalculation from 'images/calculation_engine.svg';
 
 function Logos({ withPadding }) {
   return (
@@ -37,7 +42,7 @@ function Logos({ withPadding }) {
             </div>
           </div>
           <div className={styles.iconGroup}>
-            <img src={iconNlp} alt={'logo-google'} />
+            <img src={iconData} alt={'logo-google'} />
             <div className={classnames(styles.label, styles.gradient)}>
               Data Collection
             </div>
@@ -47,7 +52,7 @@ function Logos({ withPadding }) {
             </div>
           </div>
           <div className={styles.iconGroup}>
-            <img src={iconNlp} alt={'logo-google'} />
+            <img src={iconVision} alt={'logo-google'} />
             <div className={classnames(styles.label, styles.gradient)}>
               Computer Vision
             </div>
@@ -57,7 +62,7 @@ function Logos({ withPadding }) {
             </div>
           </div>
           <div className={styles.iconGroup}>
-            <img src={iconNlp} alt={'logo-google'} />
+            <img src={iconForecast} alt={'logo-google'} />
             <div className={classnames(styles.label, styles.gradient)}>
               Forecasting & Predictions
             </div>
@@ -67,7 +72,7 @@ function Logos({ withPadding }) {
             </div>
           </div>
           <div className={styles.iconGroup}>
-            <img src={iconNlp} alt={'logo-google'} />
+            <img src={iconCluster} alt={'logo-google'} />
             <div className={classnames(styles.label, styles.gradient)}>
               Cluster Analysis
             </div>
@@ -77,7 +82,7 @@ function Logos({ withPadding }) {
             </div>
           </div>
           <div className={styles.iconGroup}>
-            <img src={iconNlp} alt={'logo-google'} />
+            <img src={iconCalculation} alt={'logo-google'} />
             <div className={classnames(styles.label, styles.gradient)}>
               Calculation Engine
             </div>

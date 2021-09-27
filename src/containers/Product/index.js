@@ -11,7 +11,11 @@ import Footer from 'components/Footer';
 
 import TitleBg from 'images/title_bg6.jpg';
 import ShowcaseDevice from 'images/laptop_1.png';
-import ShowcaseBackground from 'images/texture_bg5.png';
+import ShowcaseBackground from 'images/texture_bg5.jpg';
+import fade from 'images/case-study-main.png';
+import page1 from 'images/case-study-sub1.png';
+import page2 from 'images/case-study-sub2.png';
+import page3 from 'images/case-study-sub3.png';
 import { SHOWCASE_COPY } from 'copy';
 
 function Product() {
@@ -49,6 +53,12 @@ function Product() {
       <Screenshots2
         author={'James Kidwell'}
         company={'FlowJo, Director of Sales'}
+        screenshots={{
+          fade,
+          page1,
+          page2,
+          page3
+        }}
       />
       <Summary />
       <Choose />

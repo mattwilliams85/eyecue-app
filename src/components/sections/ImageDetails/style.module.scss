@@ -1,8 +1,8 @@
 @import '~styles/mixins';
 
 .container {
-  background: #efefef;
-  height: 800px;
+  background: #f4f4f4;
+  height: 750px;
   padding-bottom: 40px;
   position: relative;
 }
@@ -42,7 +42,7 @@
   left: 0;
   position: absolute;
   top: 0;
-  width: 43%;
+  width: 50%;
 
   &.right {
     left: initial;
@@ -51,7 +51,7 @@
 }
 
 .fill {
-  min-width: 43%;
+  min-width: 50%;
 
   &.left {
     order: 1;

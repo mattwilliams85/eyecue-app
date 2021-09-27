@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 99;
 }
 
 .topnav {
@@ -37,6 +37,10 @@
   text-transform: uppercase;
 }
 
+.mobileWrap {
+  display: none;
+}
+
 .navItem {
   align-items: center;
   color: white;
@@ -61,5 +65,64 @@
 
   &.active::after {
     transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .flexWrap {
+    display: none;
+  }
+
+  .mobileWrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    width: 40px;
+
+    &:after,
+    &:before {
+      border-bottom: 3px solid #fff;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: all ease-out 0.2s;
+      width: 100%;
+    }
+
+    &:before {
+      top: 15px;
+    }
+
+    &:after {
+      top: 30px;
+    }
+
+    &.active {
+      &:after {
+        top: 50%;
+        transform: rotate(-45deg);
+        transform-origin: center;
+      }
+
+      &:before {
+        top: 50%;
+        transform: rotate(45deg);
+        transform-origin: center
+      }
+
+      i {
+        opacity: 0;
+      }
+    }
   }
 }

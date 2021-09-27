@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import Dropdown from './Dropdown';
+import MobileMenu from './MobileMenu';
 import { COPY } from './Dropdown/copy.js';
 
 import styles from './style.module.scss';
@@ -8,6 +9,7 @@ import eyecuelogo from 'images/eyecue-logo.png';
 
 function TopNav() {
   const [activeNavItem, setActiveNavItem] = useState();
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState();
 
   function toggleDropdown(id) {
     activeNavItem === id ? setActiveNavItem() : setActiveNavItem(id);
@@ -55,6 +57,15 @@ function TopNav() {
           <div className={styles.flexWrap}>
             <div className={styles.contact}>Contact Us</div>
           </div>
+          <div className={styles.mobileWrap}>
+            <img src={eyecuelogo} alt="logo" />
+            <div
+              className={classnames(styles.hamburger, {
+                [styles.active]: isMobileMenuActive
+              })}
+              onClick={() => setIsMobileMenuActive(!isMobileMenuActive)}
+            ></div>
+          </div>
         </div>
       </div>
       <Dropdown
@@ -81,6 +92,7 @@ function TopNav() {
         copy={COPY.innovation}
         id={4}
       />
+      <MobileMenu isMobileMenuActive={isMobileMenuActive} />
     </>
   );
 }

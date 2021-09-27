@@ -11,7 +11,8 @@ import Footer from 'components/Footer';
 
 import TitleBg from 'images/title_bg2.jpg';
 import ShowcaseDevice from 'images/laptop_1.png';
-import ShowcaseBackground from 'images/texture_bg5.png';
+import ShowcaseBackground from 'images/case-study-bg.jpg';
+import QuoteBackground from 'images/case-study-quote-bg.png';
 import { SHOWCASE_COPY } from 'copy';
 
 function Intrapreneur() {
@@ -30,8 +31,8 @@ function Intrapreneur() {
         title={'The longer you wait to modernize your tools, the worse it gets'}
         copy={SHOWCASE_COPY.listables.intrapreneur}
         gradient={{
-          color1: 'edc97c',
-          color2: 'f7db41'
+          color1: '55e0a0',
+          color2: '2db8bd'
         }}
       />
       <Showcase
@@ -44,12 +45,12 @@ function Intrapreneur() {
           width: '750px',
           left: '550px'
         }}
-        darkMode
         copy={SHOWCASE_COPY.showcase.intrapreneur}
       />
       <Screenshots2
         author={'James Kidwell'}
         company={'FlowJo, Director of Sales'}
+        quoteBackground={QuoteBackground}
       />
       <Summary />
       <Choose />

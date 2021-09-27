@@ -17,7 +17,6 @@
 
 .header {
   @include header;
-  padding-top: 40px;
 }
 
 .subheader {
@@ -31,8 +30,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
 
-  &:last-child {
+.column {
+  display: flex;
+  flex-direction: column;
+
+  .block:last-child {
     background-image: none;
   }
 }
@@ -79,6 +83,14 @@
 @media (min-width: $screen-md-min) {
   .logos {
     padding-top: 0px;
+  }
+
+  .column {
+    flex-direction: row;
+  }
+
+  .header {
+    padding-top: 40px;
   }
 
   .block {

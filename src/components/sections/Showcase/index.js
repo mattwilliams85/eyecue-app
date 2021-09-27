@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
+import Slant from 'components/Slant';
 
 function Showcase({
   title,
@@ -19,6 +20,7 @@ function Showcase({
       className={styles.container}
       style={{ color: darkMode ? 'black' : 'white' }}
     >
+      <Slant />
       <img
         className={styles.containerBackground}
         src={background}

@@ -6,6 +6,9 @@
   fill: white;
   padding-bottom: 40px;
   position: relative;
+  background-image: url('~images/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .layout {
@@ -59,7 +62,7 @@
   padding-top: 120px;
 
   img {
-    height: 50px;
+    height: 70px;
     margin-bottom: 16px;
     object-fit: contain;
     width: 100px;

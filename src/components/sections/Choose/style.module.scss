@@ -21,7 +21,6 @@
 
 .block {
   padding-top: 80px;
-  width: 360px;
 
   &:last-child {
     background-image: none;
@@ -31,10 +30,14 @@
 .header {
   @include header;
   padding-top: 160px;
+  text-align: center;
 }
 
 .subheader {
   @include subheader;
+  margin: 0 auto;
+  max-width: 425px;
+  text-align: center;
 }
 
 .title {
@@ -74,7 +77,17 @@
   }
 }
 
+@media (min-width: $screen-md-min) {
+  .subheader {
+    max-width: unset;
+  }
+}
+
 @media (min-width: $screen-lg-min) {
+  .header, .subheader {
+    text-align: left;
+  }
+
   .container {
     padding-bottom: 0;
   }

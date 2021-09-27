@@ -6,32 +6,40 @@ import page1 from 'images/screenshot_4.png';
 import page2 from 'images/screenshot_5.png';
 import page3 from 'images/screenshot_6.png';
 import pageFade from 'images/screenshot_fade.png';
+import Slant from 'components/Slant';
 
-function Screenshots2({ company, author }) {
+function Screenshots2({ company, author, quoteBackground, screenshots = {} }) {
+  console.log(quoteBackground);
   return (
     <div className={styles.container}>
+      <Slant customStyle={{ top: '-210px ' }} inverted />
       <div className={styles.layout}>
         <img
           className={classnames(styles.page, styles.fade)}
-          src={pageFade}
+          src={screenshots.fade || pageFade}
           alt="pageFade"
         />
         <img
           className={classnames(styles.page, styles.top)}
-          src={page3}
+          src={screenshots.page1 || page1}
           alt="page3"
         />
         <img
           className={classnames(styles.page, styles.left)}
-          src={page1}
+          src={screenshots.page2 || page2}
           alt="page1"
         />
         <img
           className={classnames(styles.page, styles.right)}
-          src={page2}
+          src={screenshots.page3 || page3}
           alt="page2"
         />
-        <div className={styles.rectangle}>
+        <div
+          className={styles.rectangle}
+          style={{
+            backgroundImage: quoteBackground && `url(${quoteBackground})`
+          }}
+        >
           <div className={styles.body}>
             You guys are the real deal and we really appreciate the extra work
             and long hours. I can’t wait to calculate the token savings

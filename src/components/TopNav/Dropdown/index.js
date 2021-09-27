@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import styles from './style.module.scss';
 
 function Dropdown(props) {
-  const { activeNavItem, copy, id, setActiveNavItem } = props;
+  const { activeNavItem, copy, id, setActiveNavItem, isMobile } = props;
   const defaultSpringProps = {
-    transform: 'translateY(-380px)',
+    transform: isMobile ? 'translateX(100vw)' : 'translateY(-380px)',
     config: { friction: 26, tension: 250 }
   };
   const [springProps, setSpringProps] = useSpring(() => defaultSpringProps);
@@ -18,9 +18,18 @@ function Dropdown(props) {
       ...defaultSpringProps,
       transform:
         activeNavItem === id
-          ? 'translateY(-10px)'
+          ? isMobile
+            ? 'translateX(0vw)'
+            : 'translateY(-10px)'
           : defaultSpringProps.transform
     });
+
+    if (isMobile && activeNavItem === 0) {
+      setSpringProps({
+        ...defaultSpringProps,
+        transform: 'translateX(100vw)'
+      });
+    }
   }, [activeNavItem]); // eslint-disable-line
 
   return (
@@ -33,7 +42,12 @@ function Dropdown(props) {
           }}
         />
       )}
-      <animated.div className={styles.dropdownOuterwrap} style={springProps}>
+      <animated.div
+        className={classnames(styles.dropdownOuterwrap, {
+          [styles.mobile]: isMobile
+        })}
+        style={springProps}
+      >
         <div
           className={classnames(styles.dropdown, {
             [styles.active]: activeNavItem === id

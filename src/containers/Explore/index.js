@@ -11,7 +11,12 @@ import Footer from 'components/Footer';
 
 import TitleBg from 'images/title_bg5.jpg';
 import ShowcaseDevice from 'images/tablet_2.png';
-import ShowcaseBackground from 'images/texture_bg5.png';
+import ShowcaseBackground from 'images/poc-bg.jpg';
+import fade from 'images/poc-study-main.png';
+import page1 from 'images/poc-study-sub1.png';
+import page2 from 'images/poc-study-sub2.png';
+import page3 from 'images/poc-study-sub3.png';
+import quoteBackground from 'images/poc-study-quote-bg.png';
 import { SHOWCASE_COPY } from 'copy';
 
 function Explore() {
@@ -45,12 +50,18 @@ function Explore() {
           left: '750px'
         }}
         deviceTop={'-130px'}
-        darkMode
         copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2
         author={'Howie Seay'}
         company={'BD, Senior Product Manager'}
+        quoteBackground={quoteBackground}
+        screenshots={{
+          fade,
+          page1,
+          page2,
+          page3
+        }}
       />
       <Summary />
       <Choose />

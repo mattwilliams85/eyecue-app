@@ -62,12 +62,24 @@ function Intro() {
 
   useEffect(() => {
     setSpringProps1(enterSpringProps);
+
+    window.addEventListener('focus', () => {
+      // window.location.reload(false);
+    });
   }, []); // eslint-disable-line
 
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
         <div className={styles.intro}>
+          <div className={classnames(styles.phones, styles.mobileOnly)}>
+            <img className={styles.device} src={phone1} alt="phone1" />
+            <img
+              className={classnames(styles.device, styles.phone)}
+              src={phone2}
+              alt="phone2"
+            />
+          </div>
           <div>
             <div className={styles.header}>envision design innovate</div>
             <div className={styles.subheader}>
@@ -109,7 +121,7 @@ function Intro() {
             </div>
           </div>
           <animated.div
-            className={styles.devices}
+            className={styles.phones}
             style={{
               opacity: springProps1.opacity,
               transform: springProps1.transform

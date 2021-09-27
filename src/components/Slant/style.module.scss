@@ -3,9 +3,12 @@
   left: 0;
   position: absolute;
   top: 0;
-  transform: translateY(-210px);
   width: 100%;
   z-index: 1;
+
+  &.inverted {
+    // top: 0;
+  }
 
   &.bottom {
     bottom: -420px;

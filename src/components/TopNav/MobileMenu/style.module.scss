@@ -1,0 +1,129 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.dropdownOuterwrap {
+  background: #0a0a0a;
+  height: 100vh;
+  margin-top: -15px;
+  max-width: $app-width;
+  position: fixed;
+  top: 80px;
+  transform: translateY(0);
+  width: 100%;
+  z-index: 2;
+}
+
+.overlay {
+  @include overlay;
+}
+
+.dropdown {
+  color: white;
+  margin: 0 auto;
+  max-width: $container-width;
+  padding-top: 50px;
+  padding-top: 80px;
+  text-align: left;
+}
+
+.titleBlock, .linkBlock {
+  opacity: 0;
+  transition: opacity 0.4s 0.2s;
+}
+
+.active .titleBlock, .active .linkBlock {
+  opacity: 1;
+}
+
+.titleBlock {
+  border-right: 1px solid #777777;
+  max-width: 180px;
+  padding-right: 85px;
+  padding-top: 25px;
+  z-index: 1;
+}
+
+.header {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.subHeader, .linkBody {
+  color: #777777;
+}
+
+.innerWrap {
+  opacity: 0;
+  transition: opacity 0.2s 0.3s;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.linkBlock {
+  display: flex;
+  flex-direction: column;
+  height: 226px;
+  justify-content: space-between;
+  margin-left: 8.5%;
+  max-width: 180px;
+  padding-top: 25px;
+  z-index: 1;
+}
+
+.linkHeader {
+  margin-bottom: 20px;
+}
+
+.linkBody {
+  font-size: 14px;
+}
+
+.button {
+  @include learnButton(150px);
+  color: white;
+
+  margin-top: 40px;
+}
+
+.slant {
+  fill: #1d1d1d;
+  height: 400px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+.navItem {
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-left: 70px;
+  position: relative;
+
+  &::after {
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    margin: 12px 8px 0 15px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 8px;
+  }
+}

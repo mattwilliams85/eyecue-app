@@ -5,7 +5,9 @@ import Intrapreneur from 'containers/Intrapreneur';
 import Product from 'containers/Product';
 import Process from 'containers/Process';
 import Explore from 'containers/Explore';
-import Solutions from 'containers/Solutions';
+import Automation from 'containers/Automation';
+import Partnership from 'containers/Partnership';
+import ML from 'containers/ML';
 
 import './App.scss';
 
@@ -14,8 +16,14 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/solutions">
-            <Solutions />
+          <Route path="/automation">
+            <Automation />
+          </Route>
+          <Route path="/Partnership">
+            <Partnership />
+          </Route>
+          <Route path="/solutions-ml">
+            <ML />
           </Route>
           <Route path="/product">
             <Product />

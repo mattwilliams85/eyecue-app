@@ -9,6 +9,49 @@
   top: 80px;
   width: 100%;
   z-index: 2;
+
+  &.mobile {
+    background: transparent;
+    height: 100vh;
+    top: 0;
+  }
+}
+
+.mobile {
+  padding-left: 50px;
+
+  .slant {
+    display: none;
+  }
+
+  .dropdown {
+    flex-direction: column;
+  }
+
+  .titleBlock {
+    border-bottom: 1px solid #777;
+    border-right: none;
+    margin-bottom: 30px;
+    max-width: 350px;
+    padding: 0 0 30px 0;
+  }
+
+  .linkBlock {
+    background: #333;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .button {
+    border: none;
+  }
+
+  .row {
+    flex-direction: column;
+  }
 }
 
 .overlay {

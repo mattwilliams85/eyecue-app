@@ -26,21 +26,25 @@ function Logos({ withPadding }) {
           one.
         </div>
         <div className={styles.logos}>
-          <div className={styles.block}>
-            <img src={logoGoogle} alt={'logo-google'} />
-            <img src={logoBd} alt={'logo-bd'} />
+          <div className={styles.column}>
+            <div className={styles.block}>
+              <img src={logoGoogle} alt={'logo-google'} />
+              <img src={logoBd} alt={'logo-bd'} />
+            </div>
+            <div className={styles.block}>
+              <img src={logoEdf} alt={'logo-edf'} />
+              <img src={logoPowur} alt={'logo-powur'} />
+            </div>
           </div>
-          <div className={styles.block}>
-            <img src={logoEdf} alt={'logo-edf'} />
-            <img src={logoPowur} alt={'logo-powur'} />
-          </div>
-          <div className={styles.block}>
-            <img src={logoIntel} alt={'logo-intel'} />
-            <img src={logoHomedepot} alt={'logo-homedepot'} />
-          </div>
-          <div className={styles.block}>
-            <img src={logoKnox} alt={'logo-knox'} />
-            <img src={logoNike} alt={'logo-nike'} />
+          <div className={styles.column}>
+            <div className={styles.block}>
+              <img src={logoIntel} alt={'logo-intel'} />
+              <img src={logoHomedepot} alt={'logo-homedepot'} />
+            </div>
+            <div className={styles.block}>
+              <img src={logoKnox} alt={'logo-knox'} />
+              <img src={logoNike} alt={'logo-nike'} />
+            </div>
           </div>
         </div>
       </div>
