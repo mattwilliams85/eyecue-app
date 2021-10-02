@@ -62,46 +62,25 @@ function Dropdown(props) {
             <polygon points={'0 100, 100 0, 0 0'} />
           </svg>
           <div className={styles.titleBlock}>
-            <div className={styles.header}>{copy.header}</div>
+            <div className={styles.header} onClick={() => setActiveNavItem(0)}>
+              {copy.header}
+            </div>
             <div className={styles.subHeader}>{copy.subheader}</div>
           </div>
           <div className={styles.row}>
-            <div className={styles.linkBlock}>
-              <div>
-                <div className={styles.linkHeader}>{copy.title1}</div>
-                <div className={styles.linkBody}>{copy.body1}</div>
-              </div>
-              <Link className={styles.button} to="/angel-backend-startups">
-                learn more
-              </Link>
-            </div>
-            <div className={styles.linkBlock}>
-              <div>
-                <div className={styles.linkHeader}>{copy.title2}</div>
-                <div className={styles.linkBody}>{copy.body2}</div>
-              </div>
-              <Link className={styles.button} to="/enterprise-intrapreneur">
-                learn more
-              </Link>
-            </div>
-            <div className={styles.linkBlock}>
-              <div>
-                <div className={styles.linkHeader}>{copy.title3}</div>
-                <div className={styles.linkBody}>{copy.body3}</div>
-              </div>
-              <Link className={styles.button} to="/process">
-                learn more
-              </Link>
-            </div>
-            <div className={styles.linkBlock}>
-              <div>
-                <div className={styles.linkHeader}>{copy.title4}</div>
-                <div className={styles.linkBody}>{copy.body4}</div>
-              </div>
-              <Link className={styles.button} to="/">
-                learn more
-              </Link>
-            </div>
+            {copy.links.map((link, index) => {
+              return (
+                <div className={styles.linkBlock} key={index}>
+                  <div>
+                    <div className={styles.linkHeader}>{link.title}</div>
+                    <div className={styles.linkBody}>{link.body}</div>
+                  </div>
+                  <Link className={styles.button} to={`/${link.url}`}>
+                    learn more
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </animated.div>

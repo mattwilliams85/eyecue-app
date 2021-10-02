@@ -5,7 +5,7 @@ import Listables from 'components/sections/Listables';
 import Showcase from 'components/sections/Showcase';
 import Screenshots from 'components/sections/Screenshots';
 import Summary from 'components/sections/Summary';
-import Choose from 'components/sections/Choose';
+import ChooseInnovation from 'components/sections/ChooseInnovation';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
@@ -46,7 +46,7 @@ function Startup() {
       />
       <Screenshots />
       <Summary />
-      <Choose />
+      <ChooseInnovation />
       <Contact />
       <Footer />
     </>

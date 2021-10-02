@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { useSpring, animated } from 'react-spring';
-import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown';
 import { COPY } from '../Dropdown/copy.js';
 
 import styles from './style.module.scss';
 
 function MobileMenu(props) {
-  const { isMobileMenuActive } = props;
+  const { isMobileMenuActive, activeNavItem, setActiveNavItem } = props;
   const defaultSpringProps = {
     transform: 'translate3d(0, -100vh, 0)',
     config: { friction: 26, tension: 250 }
@@ -21,7 +20,6 @@ function MobileMenu(props) {
   const [innerSpringProps, setInnerSpringProps] = useSpring(
     () => defaultInnerSpringProps
   );
-  const [activeNavItem, setActiveNavItem] = useState();
 
   useEffect(() => {
     setSpringProps({
@@ -79,37 +77,57 @@ function MobileMenu(props) {
               [styles.active]: isMobileMenuActive
             })}
           >
-            <div
-              className={classnames(styles.navItem, {
-                [styles.active]: activeNavItem === 1
-              })}
-              onClick={() => toggleSideMenu(1)}
-            >
-              Innovation Services
+            <div className={styles.navItemBlock}>
+              <div
+                className={classnames(styles.navItem, {
+                  [styles.active]: activeNavItem === 1
+                })}
+                onClick={() => toggleSideMenu(1)}
+              >
+                Innovation Services
+              </div>
+              <div className={styles.description}>
+                Which kind of entrepreneur are you?
+              </div>
             </div>
-            <div
-              className={classnames(styles.navItem, {
-                [styles.active]: activeNavItem === 2
-              })}
-              onClick={() => toggleSideMenu(2)}
-            >
-              Industries
+            <div className={styles.navItemBlock}>
+              <div
+                className={classnames(styles.navItem, {
+                  [styles.active]: activeNavItem === 2
+                })}
+                onClick={() => toggleSideMenu(2)}
+              >
+                Solution Spaces
+              </div>
+              <div className={styles.description}>
+                Shaped your innovation on these foundational elements.
+              </div>
             </div>
-            <div
-              className={classnames(styles.navItem, {
-                [styles.active]: activeNavItem === 3
-              })}
-              onClick={() => toggleSideMenu(3)}
-            >
-              Client Success
+            <div className={styles.navItemBlock}>
+              <div
+                className={classnames(styles.navItem, {
+                  [styles.active]: activeNavItem === 3
+                })}
+                onClick={() => toggleSideMenu(3)}
+              >
+                Process
+              </div>
+              <div className={styles.description}>
+                We make partners, not clients.
+              </div>
             </div>
-            <div
-              className={classnames(styles.navItem, {
-                [styles.active]: activeNavItem === 4
-              })}
-              onClick={() => toggleSideMenu(4)}
-            >
-              Insights
+            <div className={styles.navItemBlock}>
+              <div
+                className={classnames(styles.navItem, {
+                  [styles.active]: activeNavItem === 4
+                })}
+                onClick={() => toggleSideMenu(4)}
+              >
+                Insights
+              </div>
+              <div className={styles.description}>
+                Let's build something amazing.
+              </div>
             </div>
           </animated.div>
           <Dropdown

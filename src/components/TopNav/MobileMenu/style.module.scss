@@ -107,23 +107,19 @@
   align-items: center;
   color: white;
   cursor: pointer;
-  font-size: 24px;
+  font-family: $title;
+  font-size: 36px;
   font-weight: bold;
   justify-content: space-between;
-  margin-bottom: 50px;
-  margin-left: 70px;
   position: relative;
+}
 
-  &::after {
-    border-right: 2px solid white;
-    border-top: 2px solid white;
-    content: "";
-    display: inline-block;
-    height: 8px;
-    margin: 12px 8px 0 15px;
-    position: absolute;
-    transform: rotate(45deg);
-    transition: all 0.15s ease-in-out;
-    width: 8px;
-  }
+.description {
+  color: #777;
+  font-size: 14px;
+}
+
+.navItemBlock {
+  margin-bottom: 50px;
+  margin-left: 10vw;
 }

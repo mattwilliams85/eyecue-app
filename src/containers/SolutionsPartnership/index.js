@@ -10,11 +10,56 @@ import screenshot1 from 'images/section1-fg.png';
 import screenshot2 from 'images/section2-fg.png';
 import screenshot3 from 'images/screenshot_8.jpg';
 
-function Automation() {
+import icon1 from 'images/NLP.svg';
+import icon2 from 'images/data_collection.svg';
+import icon3 from 'images/computer_vision.svg';
+import icon4 from 'images/forecasting_predictions.svg';
+import icon5 from 'images/cluster-analysis.svg';
+import icon6 from 'images/calculation_engine.svg';
+
+function SolutionsPartnership() {
   return (
     <>
       <TopNav />
-      <Icons />
+      <Icons
+        topic={'SOLUTION SPACE: STRATEGIC PARTNERSHIP'}
+        header={'Benefit From Our Experience'}
+        subheader={
+          'The EyeCue team evaluates your product needs holistically. We’ve found that our knowledge and services  in these areas have helped tremendously in reducing the barriers to meet our clients’ innovation goals.'
+        }
+        icons={[
+          {
+            img: icon1,
+            title: 'Data Compliance',
+            copy: 'Ensure regulatory compliance in data collection, organization, storage, and privacy'
+          },
+          {
+            img: icon2,
+            title: 'Product Discovery',
+            copy: 'Ideate and formulate initial product design, feature roadmap, launch timeline and  budget '
+          },
+          {
+            img: icon3,
+            title: 'End-to-end IoT Prototypes',
+            copy: 'In addition to software development, we design with latest 3D printing to house hardware and sensors'
+          },
+          {
+            img: icon4,
+            title: 'UX Optimization',
+            copy: 'Brand refresh and experience design. Interactive prototyping, user testing and interviews'
+          },
+          {
+            img: icon5,
+            title: 'Architectue Consultation',
+            copy: 'Audit your technological strengths, weakness, opprotunities before investing in innovation'
+          },
+          {
+            img: icon6,
+            title: 'Staff Augmentation',
+            copy: 'Ready-made innovation team that reduces time on recruitment and infrastructural investment'
+          }
+        ]}
+      />
       <ImageDetails
         image={screenshot1}
         title={'Natural Language + Robotic Processing Automation'}
@@ -45,4 +90,4 @@ function Automation() {
   );
 }
 
-export default Automation;
+export default SolutionsPartnership;

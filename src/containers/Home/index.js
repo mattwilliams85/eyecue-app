@@ -4,7 +4,7 @@ import Intro from 'components/sections/Intro';
 import Logos from 'components/sections/Logos';
 import Cards from 'components/sections/Cards';
 import Summary from 'components/sections/Summary';
-import Choose from 'components/sections/Choose';
+import ChooseInnovation from 'components/sections/ChooseInnovation';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
@@ -16,7 +16,7 @@ function Home() {
       <Logos />
       <Cards />
       <Summary backgroundColor={'f7f9fc'} />
-      <Choose />
+      <ChooseInnovation />
       <Contact />
       <Footer />
     </>

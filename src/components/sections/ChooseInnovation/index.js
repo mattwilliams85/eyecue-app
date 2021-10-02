@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './style.module.scss';
 
-function Choose() {
+function ChooseInnovation() {
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
@@ -20,7 +22,9 @@ function Choose() {
               Now you need a seasoned team that has experienced in launching
               startups and take your vision to the highest quality MVP.
             </div>
-            <div className={styles.learnmore}>learn more</div>
+            <Link to="/startups">
+              <div className={styles.learnmore}>learn more</div>
+            </Link>
           </div>
           <div className={styles.block}>
             <div className={styles.title}>Enterprise Intrapreneurs</div>
@@ -33,7 +37,9 @@ function Choose() {
               Now you need a team to build the right tools without costing an
               arm and a leg. MVP.
             </div>
-            <div className={styles.learnmore}>learn more</div>
+            <Link to="/enterprise">
+              <div className={styles.learnmore}>learn more</div>
+            </Link>
           </div>
           <div className={styles.block}>
             <div className={styles.title}>Product Pivot & Innovation</div>
@@ -46,7 +52,9 @@ function Choose() {
               Now you need to collaborate with a team that has deep industry
               expertise and can help illuminate new possibilities.
             </div>
-            <div className={styles.learnmore}>learn more</div>
+            <Link to="/product">
+              <div className={styles.learnmore}>learn more</div>
+            </Link>
           </div>
           <div className={styles.block}>
             <div className={styles.title}>Exploratory POC or R&D</div>
@@ -59,7 +67,9 @@ function Choose() {
               Now you need a team that has a deep history in working with
               bleeding edge technology to explore new digital frontiers.
             </div>
-            <div className={styles.learnmore}>learn more</div>
+            <Link to="/explore">
+              <div className={styles.learnmore}>learn more</div>
+            </Link>
           </div>
         </div>
       </div>
@@ -67,4 +77,4 @@ function Choose() {
   );
 }
 
-export default Choose;
+export default ChooseInnovation;

@@ -24,6 +24,10 @@
   @include layout;
 }
 
+.logo {
+  margin-top: 8px;
+}
+
 .flexWrap {
   align-items: center;
   display: flex;
@@ -50,7 +54,7 @@
   justify-content: space-between;
   margin-left: 70px;
 
-  &::after {
+  &:not(.link)::after {
     border-right: 2px solid white;
     border-top: 2px solid white;
     content: "";

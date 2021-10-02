@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from 'containers/Home';
+import NotFound from 'containers/NotFound';
 import Startup from 'containers/Startup';
 import Intrapreneur from 'containers/Intrapreneur';
 import Product from 'containers/Product';
@@ -7,7 +8,9 @@ import Process from 'containers/Process';
 import Explore from 'containers/Explore';
 import Automation from 'containers/Automation';
 import Partnership from 'containers/Partnership';
-import ML from 'containers/ML';
+import SolutionsMl from 'containers/SolutionsMl';
+import SolutionsPartnership from 'containers/SolutionsPartnership';
+import SolutionsWorkflow from 'containers/SolutionsWorkflow';
 
 import './App.scss';
 
@@ -16,6 +19,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
           <Route path="/automation">
             <Automation />
           </Route>
@@ -23,7 +29,13 @@ function App() {
             <Partnership />
           </Route>
           <Route path="/solutions-ml">
-            <ML />
+            <SolutionsMl />
+          </Route>
+          <Route path="/solutions-partnership">
+            <SolutionsPartnership />
+          </Route>
+          <Route path="/solutions-workflow">
+            <SolutionsWorkflow />
           </Route>
           <Route path="/product">
             <Product />
@@ -31,16 +43,16 @@ function App() {
           <Route path="/explore">
             <Explore />
           </Route>
-          <Route path="/angel-backend-startups">
+          <Route path="/startups">
             <Startup />
           </Route>
-          <Route path="/enterprise-intrapreneur">
+          <Route path="/enterprise">
             <Intrapreneur />
           </Route>
           <Route path="/process">
             <Process />
           </Route>
-          <Home />
+          <NotFound />
         </Switch>
       </Router>
     </div>

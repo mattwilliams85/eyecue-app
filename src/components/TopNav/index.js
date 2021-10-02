@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import Dropdown from './Dropdown';
 import MobileMenu from './MobileMenu';
 import { COPY } from './Dropdown/copy.js';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.scss';
 import eyecuelogo from 'images/eyecue-logo.png';
@@ -20,7 +21,9 @@ function TopNav() {
       <div className={styles.outerWrap}>
         <div className={styles.topnav}>
           <div className={styles.flexWrap}>
-            <img src={eyecuelogo} alt="logo" />
+            <Link to="/">
+              <img src={eyecuelogo} alt="logo" className={styles.logo} />
+            </Link>
             <div
               className={classnames(styles.navItem, {
                 [styles.active]: activeNavItem === 1
@@ -35,24 +38,20 @@ function TopNav() {
               })}
               onClick={() => toggleDropdown(2)}
             >
-              Industries
+              Solution Spaces
             </div>
-            <div
-              className={classnames(styles.navItem, {
-                [styles.active]: activeNavItem === 3
-              })}
-              onClick={() => toggleDropdown(3)}
+            <Link
+              className={classnames(styles.navItem, styles.link)}
+              to={'/process'}
             >
-              Client Success
-            </div>
-            <div
-              className={classnames(styles.navItem, {
-                [styles.active]: activeNavItem === 4
-              })}
-              onClick={() => toggleDropdown(4)}
+              Process
+            </Link>
+            <Link
+              className={classnames(styles.navItem, styles.link)}
+              to={'/blog'}
             >
               Insights
-            </div>
+            </Link>
           </div>
           <div className={styles.flexWrap}>
             <div className={styles.contact}>Contact Us</div>
@@ -77,7 +76,7 @@ function TopNav() {
       <Dropdown
         activeNavItem={activeNavItem}
         setActiveNavItem={setActiveNavItem}
-        copy={COPY.innovation}
+        copy={COPY.solutions}
         id={2}
       />
       <Dropdown
@@ -92,7 +91,11 @@ function TopNav() {
         copy={COPY.innovation}
         id={4}
       />
-      <MobileMenu isMobileMenuActive={isMobileMenuActive} />
+      <MobileMenu
+        isMobileMenuActive={isMobileMenuActive}
+        activeNavItem={activeNavItem}
+        setActiveNavItem={setActiveNavItem}
+      />
     </>
   );
 }
