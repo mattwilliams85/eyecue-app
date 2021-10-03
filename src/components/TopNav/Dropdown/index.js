@@ -62,7 +62,7 @@ function Dropdown(props) {
             <polygon points={'0 100, 100 0, 0 0'} />
           </svg>
           <div className={styles.titleBlock}>
-            <div className={styles.header} onClick={() => setActiveNavItem(0)}>
+            <div className={styles.header} onClick={() => setActiveNavItem()}>
               {copy.header}
             </div>
             <div className={styles.subHeader}>{copy.subheader}</div>

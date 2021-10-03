@@ -9,11 +9,13 @@
   top: 80px;
   width: 100%;
   z-index: 2;
+  display: none;
 
   &.mobile {
     background: transparent;
     height: 100vh;
     top: 0;
+    display: block;
   }
 }
 
@@ -34,9 +36,10 @@
   }
 
   .linkBlock {
-    height: 70px;
+    height: unset;
     margin-bottom: 20px;
     margin-left: 0;
+    padding-top: 15px;
     max-width: 350px;
   }
 
@@ -47,6 +50,7 @@
   .linkHeader {
     font-size: 36px;
     font-family: $title;
+    cursor: pointer;
   }
 
   .button {
@@ -62,6 +66,7 @@
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 0px;
+    cursor: pointer;
     position: relative;
 
     &:before {
@@ -96,7 +101,7 @@
   display: flex;
   margin: 0 auto;
   max-width: $container-width;
-  padding-top: 50px;
+  padding: 50px 20px 0;
   text-align: left;
 }
 
@@ -166,4 +171,10 @@
   position: absolute;
   top: 0;
   width: 165px;
+}
+
+@media (min-width: $screen-lg-min) {
+  .dropdownOuterwrap {
+    display: block;
+  }
 }

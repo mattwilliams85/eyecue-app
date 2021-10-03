@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
+
 import Dropdown from './Dropdown';
 import MobileMenu from './MobileMenu';
 import { COPY } from './Dropdown/copy.js';
@@ -15,6 +16,17 @@ function TopNav() {
   function toggleDropdown(id) {
     activeNavItem === id ? setActiveNavItem() : setActiveNavItem(id);
   }
+
+  function handleResize() {
+    setActiveNavItem();
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>

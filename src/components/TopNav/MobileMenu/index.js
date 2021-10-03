@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { useSpring, animated } from 'react-spring';
 import Dropdown from '../Dropdown';
 import { COPY } from '../Dropdown/copy.js';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.scss';
 
@@ -38,7 +39,7 @@ function MobileMenu(props) {
         }
       });
     }
-  }, [isMobileMenuActive]); // eslint-disable-line
+  }, [isMobileMenuActive, activeNavItem]); // eslint-disable-line
 
   useEffect(() => {
     if (activeNavItem > 0) {
@@ -46,6 +47,13 @@ function MobileMenu(props) {
         ...defaultInnerSpringProps,
         transform: isMobileMenuActive
           ? 'translate3d(-100vw, 0vh, 0)'
+          : defaultInnerSpringProps.transform
+      });
+    } else {
+      setInnerSpringProps({
+        defaultInnerSpringProps,
+        transform: isMobileMenuActive
+          ? 'translate3d(0vw, 0vh, 0)'
           : defaultInnerSpringProps.transform
       });
     }
@@ -103,32 +111,22 @@ function MobileMenu(props) {
                 Shaped your innovation on these foundational elements.
               </div>
             </div>
-            <div className={styles.navItemBlock}>
-              <div
-                className={classnames(styles.navItem, {
-                  [styles.active]: activeNavItem === 3
-                })}
-                onClick={() => toggleSideMenu(3)}
-              >
-                Process
+            <Link to="/process">
+              <div className={styles.navItemBlock}>
+                <div className={styles.navItem}>Process</div>
+                <div className={styles.description}>
+                  We make partners, not clients.
+                </div>
               </div>
-              <div className={styles.description}>
-                We make partners, not clients.
+            </Link>
+            <Link to="/blog">
+              <div className={styles.navItemBlock}>
+                <div className={styles.navItem}>Insights</div>
+                <div className={styles.description}>
+                  Let's build something amazing.
+                </div>
               </div>
-            </div>
-            <div className={styles.navItemBlock}>
-              <div
-                className={classnames(styles.navItem, {
-                  [styles.active]: activeNavItem === 4
-                })}
-                onClick={() => toggleSideMenu(4)}
-              >
-                Insights
-              </div>
-              <div className={styles.description}>
-                Let's build something amazing.
-              </div>
-            </div>
+            </Link>
           </animated.div>
           <Dropdown
             activeNavItem={activeNavItem}
@@ -140,22 +138,8 @@ function MobileMenu(props) {
           <Dropdown
             activeNavItem={activeNavItem}
             setActiveNavItem={setActiveNavItem}
-            copy={COPY.innovation}
+            copy={COPY.solutions}
             id={2}
-            isMobile
-          />
-          <Dropdown
-            activeNavItem={activeNavItem}
-            setActiveNavItem={setActiveNavItem}
-            copy={COPY.innovation}
-            id={3}
-            isMobile
-          />
-          <Dropdown
-            activeNavItem={activeNavItem}
-            setActiveNavItem={setActiveNavItem}
-            copy={COPY.innovation}
-            id={4}
             isMobile
           />
         </div>
