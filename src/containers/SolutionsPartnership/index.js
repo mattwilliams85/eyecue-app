@@ -10,12 +10,12 @@ import screenshot1 from 'images/section1-fg.png';
 import screenshot2 from 'images/section2-fg.png';
 import screenshot3 from 'images/screenshot_8.jpg';
 
-import icon1 from 'images/NLP.svg';
-import icon2 from 'images/data_collection.svg';
-import icon3 from 'images/computer_vision.svg';
-import icon4 from 'images/forecasting_predictions.svg';
-import icon5 from 'images/cluster-analysis.svg';
-import icon6 from 'images/calculation_engine.svg';
+import icon1 from 'images/data_compliance.svg';
+import icon2 from 'images/discovery.svg';
+import icon3 from 'images/iot.svg';
+import icon4 from 'images/ux.svg';
+import icon5 from 'images/architecture.svg';
+import icon6 from 'images/staff_augmentation.svg';
 
 function SolutionsPartnership() {
   return (

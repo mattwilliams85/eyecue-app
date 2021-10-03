@@ -10,12 +10,12 @@ import screenshot1 from 'images/solutions-workflow-bg1.png';
 import screenshot2 from 'images/solutions-workflow-bg2.png';
 import screenshot3 from 'images/solutions-workflow-bg3.png';
 
-import icon1 from 'images/NLP.svg';
-import icon2 from 'images/data_collection.svg';
-import icon3 from 'images/computer_vision.svg';
-import icon4 from 'images/forecasting_predictions.svg';
-import icon5 from 'images/cluster-analysis.svg';
-import icon6 from 'images/calculation_engine.svg';
+import icon1 from 'images/approval.svg';
+import icon2 from 'images/satisfaction.svg';
+import icon3 from 'images/visibility.svg';
+import icon4 from 'images/error_prevention.svg';
+import icon5 from 'images/compliance.svg';
+import icon6 from 'images/improvement.svg';
 
 function SolutionsMl() {
   return (

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import styles from './style.module.scss';
 
@@ -12,6 +13,9 @@ function Dropdown(props) {
     config: { friction: 26, tension: 250 }
   };
   const [springProps, setSpringProps] = useSpring(() => defaultSpringProps);
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1280px)'
+  });
 
   useEffect(() => {
     setSpringProps({
@@ -72,7 +76,9 @@ function Dropdown(props) {
               return (
                 <div className={styles.linkBlock} key={index}>
                   <div>
-                    <div className={styles.linkHeader}>{link.title}</div>
+                    <div className={styles.linkHeader}>
+                      {isDesktop ? link.title : link.mobileTitle}
+                    </div>
                     <div className={styles.linkBody}>{link.body}</div>
                   </div>
                   <Link className={styles.button} to={`/${link.url}`}>

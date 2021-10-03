@@ -24,8 +24,7 @@
   font-weight: 300;
   font-family: Audiowide;
   width: 333px;
-  // text-shadow: 0px 0px 4px #333;
-  animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite;
+  animation: fadeInText 1s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite;
 }
 
 .svgWrap_1,
@@ -122,23 +121,23 @@
 }
 
 @keyframes flicker4{
-  0%  {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
-  30% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  0%  {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
+  30% {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
   31% {color: #333;text-shadow:0px 0px 4px #333;}
-  32% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
-  36% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  32% {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
+  36% {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
   37% {color: #333;text-shadow:0px 0px 4px #333;}
   41% {color: #333;text-shadow:0px 0px 4px #333;}
-  42% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
-  85% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  42% {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
+  85% {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
   86% {color: #333;text-shadow:0px 0px 4px #333;}
   95% {color: #333;text-shadow:0px 0px 4px #333;}
-  96% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
-  100%{color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  96% {color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
+  100%{color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
 }
 
 @keyframes fadeInText{
   1%  {color: #333;text-shadow:0px 0px 4px #333;}
   70% {color: #ff005d;text-shadow:0px 0px 14px #ff005d;}
-  100%{color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  100%{color: #ff005d;text-shadow:0px 0px 8px #ff005d;}
 }
