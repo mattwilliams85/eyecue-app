@@ -105,6 +105,7 @@ function TopNav() {
       />
       <MobileMenu
         isMobileMenuActive={isMobileMenuActive}
+        setIsMobileMenuActive={setIsMobileMenuActive}
         activeNavItem={activeNavItem}
         setActiveNavItem={setActiveNavItem}
       />

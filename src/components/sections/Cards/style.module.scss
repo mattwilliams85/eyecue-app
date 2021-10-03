@@ -96,7 +96,8 @@
 }
 
 .button {
-  @include learnButton(180px)
+  @include learnButton(180px);
+  color: white;
 }
 
 @media (min-width: $screen-md-min) {

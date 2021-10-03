@@ -92,9 +92,10 @@
 
     &:after,
     &:before {
-      border-bottom: 3px solid #fff;
+      background: white;
+      border-radius: 16px;
       content: '';
-      height: 0;
+      height: 3px;
       left: 0;
       position: absolute;
       right: 0;
@@ -104,11 +105,11 @@
     }
 
     &:before {
-      top: 15px;
+      top: 12px;
     }
 
     &:after {
-      top: 30px;
+      top: 27px;
     }
 
     &.active {

@@ -3,6 +3,7 @@ import styles from './style.module.scss';
 import deviceBd from 'images/device-bd.png';
 import devicePowur from 'images/device-powur.png';
 import deviceFlowjo from 'images/device-flowjo.png';
+import { Link } from 'react-router-dom';
 
 function Cards() {
   return (
@@ -26,7 +27,9 @@ function Cards() {
                 <div className={styles.subject}>
                   AI-accelerated vaccine research
                 </div>
-                <div className={styles.button}>Learn More</div>
+                <Link to="/blog">
+                  <div className={styles.button}>Learn More</div>
+                </Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -38,7 +41,9 @@ function Cards() {
                 <div className={styles.subject}>
                   Automation that 100x the valuation
                 </div>
-                <div className={styles.button}>Learn More</div>
+                <Link to="/blog">
+                  <div className={styles.button}>Learn More</div>
+                </Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -50,7 +55,9 @@ function Cards() {
                 <div className={styles.subject}>
                   When Salesforce is not good enough
                 </div>
-                <div className={styles.button}>Learn More</div>
+                <Link to="/blog">
+                  <div className={styles.button}>Learn More</div>
+                </Link>
               </div>
             </div>
           </div>

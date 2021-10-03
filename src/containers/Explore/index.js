@@ -1,4 +1,6 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+
 import TopNav from 'components/TopNav';
 import Title from 'components/sections/Title';
 import Listables from 'components/sections/Listables';
@@ -20,6 +22,10 @@ import quoteBackground from 'images/poc-study-quote-bg.png';
 import { SHOWCASE_COPY } from 'copy';
 
 function Explore() {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 768px)'
+  });
+
   return (
     <>
       <TopNav />
@@ -44,12 +50,9 @@ function Explore() {
         subheader={`EyeCue transforms years of scientific research experience into seconds with artificial intelligence.`}
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}
-        deviceStyles={{
-          top: '-150px',
-          width: '550px',
-          left: '750px'
-        }}
-        deviceTop={'-130px'}
+        deviceStyles={
+          !isDesktop ? { top: '-340px', width: '100%', left: '0px' } : undefined
+        }
         copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2

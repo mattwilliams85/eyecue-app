@@ -8,7 +8,12 @@ import { Link } from 'react-router-dom';
 import styles from './style.module.scss';
 
 function MobileMenu(props) {
-  const { isMobileMenuActive, activeNavItem, setActiveNavItem } = props;
+  const {
+    isMobileMenuActive,
+    activeNavItem,
+    setActiveNavItem,
+    setIsMobileMenuActive
+  } = props;
   const defaultSpringProps = {
     transform: 'translate3d(0, -100vh, 0)',
     config: { friction: 26, tension: 250 }
@@ -131,6 +136,7 @@ function MobileMenu(props) {
           <Dropdown
             activeNavItem={activeNavItem}
             setActiveNavItem={setActiveNavItem}
+            setIsMobileMenuActive={setIsMobileMenuActive}
             copy={COPY.innovation}
             id={1}
             isMobile
@@ -138,6 +144,7 @@ function MobileMenu(props) {
           <Dropdown
             activeNavItem={activeNavItem}
             setActiveNavItem={setActiveNavItem}
+            setIsMobileMenuActive={setIsMobileMenuActive}
             copy={COPY.solutions}
             id={2}
             isMobile

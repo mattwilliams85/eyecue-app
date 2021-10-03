@@ -1,4 +1,6 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+
 import TopNav from 'components/TopNav';
 import Title from 'components/sections/Title';
 import Listables from 'components/sections/Listables';
@@ -19,6 +21,9 @@ import page3 from 'images/case-study-sub3.png';
 import { SHOWCASE_COPY } from 'copy';
 
 function Product() {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 768px)'
+  });
   return (
     <>
       <TopNav />
@@ -43,11 +48,15 @@ function Product() {
         subheader={`EyeCue consolidates internal legacy data sources and built an Order Management system that truly fit their needs.`}
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}
-        deviceStyles={{
-          top: '-130px',
-          width: '750px',
-          left: '550px'
-        }}
+        deviceStyles={
+          isDesktop
+            ? {
+                top: '-130px',
+                width: '750px',
+                left: '550px'
+              }
+            : { top: '-240px', width: '100%', left: '0px' }
+        }
         copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2

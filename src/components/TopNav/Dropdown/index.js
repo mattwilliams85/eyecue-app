@@ -1,13 +1,21 @@
 import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { useSpring, animated } from 'react-spring';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import styles from './style.module.scss';
 
 function Dropdown(props) {
-  const { activeNavItem, copy, id, setActiveNavItem, isMobile } = props;
+  const {
+    activeNavItem,
+    copy,
+    id,
+    setActiveNavItem,
+    isMobile,
+    setIsMobileMenuActive
+  } = props;
+  const history = useHistory();
   const defaultSpringProps = {
     transform: isMobile ? 'translateX(100vw)' : 'translateY(-380px)',
     config: { friction: 26, tension: 250 }
@@ -76,7 +84,13 @@ function Dropdown(props) {
               return (
                 <div className={styles.linkBlock} key={index}>
                   <div>
-                    <div className={styles.linkHeader}>
+                    <div
+                      className={styles.linkHeader}
+                      onClick={() => {
+                        setIsMobileMenuActive(false);
+                        history.push(`/${link.url}`);
+                      }}
+                    >
                       {isDesktop ? link.title : link.mobileTitle}
                     </div>
                     <div className={styles.linkBody}>{link.body}</div>

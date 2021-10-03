@@ -1,5 +1,7 @@
+@import '~styles/variables';
+
 .slant {
-  height: 210px;
+  height: 100px;
   left: 0;
   position: absolute;
   top: 0;
@@ -18,5 +20,11 @@
 
   polygon {
     fill: inherit;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .slant {
+    height: 210px;
   }
 }

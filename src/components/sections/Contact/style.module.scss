@@ -18,10 +18,19 @@
 .header {
   @include header;
   color: white;
+  text-align: center;
   margin-bottom: 40px;
-  padding-top: 315px;
+  padding-top: 250px;
+  font-size: 40px;
 }
 
 .button {
   @include learnButton(210px)
+}
+
+@media (min-width: $screen-md-min) {
+  .header {
+    padding-top: 315px;
+    font-size: 48px;
+  }
 }

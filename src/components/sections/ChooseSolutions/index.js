@@ -7,7 +7,7 @@ function ChooseSolutions() {
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
-        <div className={styles.header}>Choose Your Own Adventure</div>
+        <div className={styles.header}>Choose Your Adventure</div>
         <div className={styles.subheader}>
           There are many paths to success through innovation, which one are you?
         </div>

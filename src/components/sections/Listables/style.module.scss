@@ -3,7 +3,7 @@
 
 .layout {
   @include layout;
-  padding-bottom: 130px;
+  padding-bottom: 300px;
   text-align: left;
 }
 
@@ -15,7 +15,7 @@
   font-weight: 300;
   justify-content: space-between;
   line-height: 36px;
-  padding-top: 200px;
+  padding-top: 120px;
 }
 
 .title {
@@ -37,10 +37,10 @@
 }
 
 .listWrapper {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 100px;
+  display: none;
 }
 
 .header {
@@ -53,6 +53,7 @@
 
 .list {
   margin-bottom: 40px;
+  display: none;
 }
 
 .list li {
@@ -63,8 +64,15 @@
 }
 
 @media (min-width: $screen-sm-min) {
+  .layout {
+    padding-bottom: 130px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
   .summary {
     flex-direction: row;
+    padding-top: 200px;
   }
 
   .title {
@@ -78,9 +86,11 @@
   .listWrapper {
     flex-direction: row;
     padding-top: 150px;
+    display: flex;
   }
 
   .list {
     margin-bottom: 0;
+    display: block;
   }
 }

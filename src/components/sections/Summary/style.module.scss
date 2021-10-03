@@ -13,7 +13,7 @@
 
 .layout {
   @include layout;
-  padding-top: 235px;
+  padding-top: 150px;
   text-align: left;
 }
 
@@ -35,4 +35,10 @@
   line-height: 24px;
   margin-bottom: 30px;
   max-width: 680px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .layout {
+    padding-top: 235px;
+  }
 }

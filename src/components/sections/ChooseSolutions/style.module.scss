@@ -29,14 +29,16 @@
 
 .header {
   @include header;
-  padding-top: 160px;
+  padding-top: 80px;
   text-align: center;
+  font-size: 36px;
 }
 
 .subheader {
   @include subheader;
   margin: 0 auto;
   max-width: 425px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -84,6 +86,16 @@
 }
 
 @media (min-width: $screen-lg-min) {
+  .header {
+    padding-top: 160px;
+    font-size: 48px;
+  }
+
+  .subheader {
+    font-size: 24px;
+  }
+
+
   .header, .subheader {
     text-align: left;
   }

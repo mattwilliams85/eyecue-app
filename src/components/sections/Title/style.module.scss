@@ -14,6 +14,7 @@
   object-fit: cover;
   position: absolute;
   width: 100%;
+  object-position: 80%;
 }
 
 .layout {
@@ -32,30 +33,40 @@
 
 .main {
   display: flex;
-  padding: 200px 0;
+  padding: 400px 0 40px;
 }
 
 .subheader {
   @include subheader;
   margin-top: 30px;
   max-width: 600px;
+  display: none;
   text-align: left;
 }
 
 .topic {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 8px;
   text-transform: uppercase;
 }
 
 @media (min-width: $screen-sm-min) {
+  .topic {
+    font-size: 18px;
+  }
+
   .container {
     height: 840px;
   }
 
+  .subheader {
+    display: block;
+  }
+
   .containerBackground {
     background-position: 0 -21px;
+    object-position: initial;
   }
 
   .header {
