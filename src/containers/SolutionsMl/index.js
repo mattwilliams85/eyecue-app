@@ -2,7 +2,7 @@ import React from 'react';
 import TopNav from 'components/TopNav';
 import Icons from 'components/sections/Icons';
 import ImageDetails from 'components/sections/ImageDetails';
-import ChooseSolutions from 'components/sections/ChooseSolutions';
+import Logos from 'components/sections/Logos';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
@@ -83,7 +83,7 @@ function SolutionsMl() {
           'Making relevant recommendation is hard. Using machine learnign methods, EyeCue can identifies micro-niches of similar users based on their tastes and preferences. When one user experiences something positive, the system automatically shares the experience with other people in the same niche.'
         }
       />
-      <ChooseSolutions />
+      <Logos withPadding />
       <Contact />
       <Footer />
     </>

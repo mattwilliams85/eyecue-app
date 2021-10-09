@@ -9,7 +9,7 @@ function ImageDetails({
   image,
   title,
   copy,
-  link,
+  large,
   isImageRight
 }) {
   function createMarkup(message) {
@@ -18,7 +18,9 @@ function ImageDetails({
 
   return (
     <div
-      className={styles.container}
+      className={classnames(styles.container, {
+        [styles.large]: large
+      })}
       style={{ backgroundColor: backgroundColor }}
     >
       <div

@@ -2,14 +2,18 @@
 
 .container {
   background: #f4f4f4;
-  height: 750px;
+  height: 800px;
   padding-bottom: 40px;
   position: relative;
+
+  &.large {
+    height: 1000px;
+  }
 }
 
 .layout {
   @include layout;
-  padding-top: 170px;
+  padding-top: 150px;
 }
 
 .row {

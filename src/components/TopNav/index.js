@@ -58,12 +58,12 @@ function TopNav() {
             >
               Process
             </Link>
-            <Link
+            <a
               className={classnames(styles.navItem, styles.link)}
-              to={'/blog'}
+              href="https://www.eyecuelab.com/blog/"
             >
               Insights
-            </Link>
+            </a>
           </div>
           <div className={styles.flexWrap}>
             <div className={styles.contact}>Contact Us</div>

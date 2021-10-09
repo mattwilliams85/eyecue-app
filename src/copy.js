@@ -1,66 +1,33 @@
 export const SHOWCASE_COPY = {
   showcase: {
     startup: {
-      block1: `Powur is the first entrepreneurial platform for solar energy. It
-      empowers individuals to create a business in solar from the palm of
-      their hand. The vision is to put solar panels on 2,000,000 homes by
+      block1: `Powur is the first entrepreneurial platform for solar energy. It empowers individuals to create a business in solar from the palm of their hand. The vision is to put solar panels on 2,000,000 homes by 2025.
       2025.
       <br />
       <br />
-      Powur was founded by individuals with a deep history in direct
-      sales, technology and giving back. EyeCue as their dedicated
-      technology team has participated in the evolution of the product
-      from ideation through inception, and on through launch; providing
-      branding, user experience, server and mobile side development via
-      product expertise and innovative thought.
-      <br /> <br />
-      Today, Powur is a consortium of solar installers, manufacturers,
-      financiers, and entrepreneurs who seek to bring the best-of-breed
-      products and services to the end consumer.`,
-      block2: `Donec accumsan est vel eros egestas pharetra. Donec eu tellus metus.
-      Vestibulum sollicitudin quis lorem rutrum imperdiet. Mauris eu
-      venenatis nibh.
+      Powur's journey from ideation to launch is fraught with challenges such as evolving business models, adapting to new customer experiences, pivoting user roles to capture additional market share, and maintaining a multi-tiered marketplace that speaks to different audiences`,
+      block2: `To date, the EyeCue team has embraced each scenario and stood shoulder-to-shoulder with Powur to take on each challenge with confidence.
       <br />
       <br />
-      Aliquam et nunc at erat fringilla porttitor eu ut magna.
-      Pellentesque arcu tellus, commodo at augue ac, accumsan laoreet
-      metus. Cras eget magna nec est hendrerit hendrerit. Quisque justo
-      lectus, ultrices eu mattis vel, scelerisque vitae lectus. Nulla
-      facilisi.
+      Under this partnership model, the EyeCue team acts as Powur's internal technology resource and functions as an active product design department. In addition to providing system architecture and deployment strategy, the EyeCue team also crafts branding and marketing material that makes the end-to-end user experience cohesive.`,
+      block3: `Over the last eight years, the EyeCue team has launched multiple web and mobile initiatives, acted as CTO and CPO in front of the investors during fundraising, and even provided direct support to their growing customer base.
       <br />
       <br />
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-      sollicitudin consectetur erat, in imperdiet ante mollis vel.
-      Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras
-      lacinia mattis odio nec accumsan.`,
-      block3: `Vivamus arcu ex, lacinia eu convallis vitae, sodales ut dui. Sed et
-      justo eu velit dignissim congue. Nam vulputate tincidunt lorem vel
-      lacinia. Mauris enim metus, porta at posuere posuere, suscipit vitae
-      risus. Aliquam id leo vestibulum magna elementum fermentum et vel
-      ipsum. Etiam tempor arcu quis rutrum lobortis.
-      <br />
-      <br />
-      Integer pellentesque est mi, non aliquam ipsum tempus commodo. Veros
-      a magna imperdiet rutrum.`
+      Today, Powur is valued at over 400 million dollars. And it continues to be a consortium of solar installers, manufacturers, financiers, and entrepreneurs who seek to bring the best-of-breed products and services to the end consumer.`
     },
     intrapreneur: {
       block1: `Good science is based on good data acquisition and analysis. US-based FlowJo, LLC pioneered and remains the undisputed leader in flow cytometry. Their key products, FlowJo and SeqGeq are the de facto curriculum at educational institutions around the world.
       <br />
       <br />
-      With growth came new challenges; FlowJo needed new technology to keep pace and an enterprise software partner to implement it. Enter EyeCue Lab. We identified the requirements to modernize legacy systems and the quickest path to process automation and new solution was implemented in months instead of years.
-      <br /> <br />
-      Today, Powur is a consortium of solar installers, manufacturers,
-      financiers, and entrepreneurs who seek to bring the best-of-breed
-      products and services to the end consumer.`,
-      block2: `Common customer interactions became self-service. Fulfillment was upgraded to a robust, modular platform and integrated with existing services including Quickbooks, FedEx, and Hubspot. Automations reduced user workload and freed up the team to focus on high-value opportunities.
+      Over the 15 years of business operations, FlowJo, like many startups, has pivoted and aggregated an extensive array of sales modes, including monthly subscriptions, lifetime licenses, enterprise vs. educational pricing, custom bulk rates, and more. .`,
+      block2: `The complexity is compounded because payment workflow requires multiple touchpoints, including quote generation and approval, purchase order verification, check or wire payment verification, license activation, and reporting to various external software such as Quickbooks, Hubspot, and SAP.
       <br />
       <br />
-      Aliquam et nunc at erat fringilla porttitor eu ut magna. Pellentesque arcu tellus, commodo at augue ac, accumsan laoreet metus. Cras eget magna nec est hendrerit hendrerit. Quisque justo lectus, ultrices eu mattis vel, scelerisque vitae lectus. Nulla facilisi.
-      facilisi.`,
-      block3: `Vivamus arcu ex, lacinia eu convallis vitae, sodales ut dui. Sed et justo eu velit dignissim congue. Nam vulputate tincidunt lorem vel lacinia. Mauris enim metus, porta at posuere posuere, suscipit vitae risus. Aliquam id leo vestibulum magna elementum fermentum et vel ipsum. Etiam tempor arcu quis rutrum lobortis.
+      EyeCue team realizes that any turnkey solution at this level of customization becomes a glorified database buried under many irrelevant product features. `,
+      block3: `Instead, the EyeCue team can design FlowJo's very own solution from day 1. As a result, the EyeCue team identified the requirements to modernize FlowJo's legacy systems and paved the quickest path to process automation without trial periods or limitations from a pre-built product.
       <br />
       <br />
-      Integer pellentesque est mi, non aliquam ipsum tempus commodo. Veros a magna imperdiet rutrum.`
+      Today, this transformation not only reduced user workload, but it also freed up the team to focus on high-value opportunities.`
     },
     explore: {
       block1: `With nearly 16 Billion dollars in revenue and over 50,000 employees, Becton Dickinson (BD) is one of the largest medical manufacturers in the world.

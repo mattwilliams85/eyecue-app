@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import classnames from 'classnames';
 import { useSpring, animated } from 'react-spring';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import styles from './style.module.scss';
@@ -16,6 +16,7 @@ function Dropdown(props) {
     setIsMobileMenuActive
   } = props;
   const history = useHistory();
+  const { pathname } = useLocation();
   const defaultSpringProps = {
     transform: isMobile ? 'translateX(100vw)' : 'translateY(-380px)',
     config: { friction: 26, tension: 250 }
@@ -95,7 +96,12 @@ function Dropdown(props) {
                     </div>
                     <div className={styles.linkBody}>{link.body}</div>
                   </div>
-                  <Link className={styles.button} to={`/${link.url}`}>
+                  <Link
+                    className={classnames(styles.button, {
+                      [styles.active]: pathname === `/${link.url}`
+                    })}
+                    to={`/${link.url}`}
+                  >
                     learn more
                   </Link>
                 </div>

@@ -14,22 +14,17 @@ function LeftRightLeft() {
           <div>
             <div className={styles.title}>The Venn Diagram that Works</div>
             <div className={styles.body}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              tempus iaculis sapien, id pulvinar arcu sodales blandit. Maecenas
-              ut nibh tristique nunc lobortis ultrices.
+              EyeCue is a pro when it comes to creating something new. Our team
+              continues to accrue the latest product launch trends every year.
+              By working with a wide range of industries, this real-world and
+              bleeding- edge experience can dramatically increase your product’s
+              market adoption and fit no matter what we build together.
               <br />
               <br />
-              Curabitur vel tincidunt quam. Vestibulum non tellus varius,
-              ullamcorper diam et, tincidunt lectus. Nulla interdum nisi
-              pretium, rutrum leo id, sodales turpis. Duis vestibulum sodales
-              nisi, in vulputate mauris sagittis nec. Maecenas interdum nec ante
-              sit amet fermentum.
-              <br />
-              <br />
-              Phasellus quis enim id turpis maximus viverra ac eget leo. Mauris
-              eget maximus ligula, at porta ex. Vivamus justo quam, molestie
-              eget tempor quis, fermentum vel nisl. Curabitur sed odio leo.
-              Suspendisse aliquet sit amet nisi sed iaculis.
+              EyeCue takes pride in delivering immediate value to our clients’
+              internal users while keeping an eye on the long-term objectives.
+              Without having lengthy vetting and trial process, the EyeCue team
+              can start creating what you truly need from day one.
             </div>
           </div>
         </div>
@@ -39,19 +34,18 @@ function LeftRightLeft() {
               Alignment with Your Internal Strength
             </div>
             <div className={styles.body}>
-              Nulla ullamcorper, leo vitae efficitur sodales, mi risus venenatis
-              nisi, in varius purus quam nec lacus. Interdum et malesuada fames
-              ac ante ipsum primis in faucibus. Curabitur vel tincidunt turpis,
-              vehicula fringilla dui.
+              EyeCue team defines its capabilities by the velocity and the
+              impact of value it produces instead of technology stacks. By
+              having 20 years of enterprise and startup experience, the EyeCue
+              team is ready to design and implement every modern technology
+              environment.
               <br />
               <br />
-              Morbi dignissim hendrerit tristique. Mauris consequat enim quis
-              arcu suscipit faucibus. Ut ut neque eget neque egestas pretium non
-              accumsan magna. Cras maximus orci eu augue luctus commodo.
-              <br />
-              <br />
-              Mauris pulvinar viverra convallis. Nunc eu ornare ante. In nisl
-              lorem, dignissim eget lorem et, dapibus consequat sem.
+              Our IoT, Data Science, and Artificial Intelligence background
+              provide unprecedented support in unlocking the possibility to
+              analyze your solution without limitations. It is in the most
+              complex and innovative applications where EyeCue’s expertise truly
+              shines.
             </div>
           </div>
           <img src={graph2} alt="venn diagram" className={styles.graph} />
@@ -63,19 +57,17 @@ function LeftRightLeft() {
               End-user Centric Product Development
             </div>
             <div className={styles.body}>
-              Sed efficitur, lectus ut condimentum finibus, erat orci cursus
-              libero, eu efficitur tortor ligula ac leo. Maecenas viverra enim
-              eget lorem porta, eget lacinia turpis feugiat.
+              EyeCue measures the impact of innovation by the scope of the
+              problem it addresses and the speed of adoption in the hands of the
+              intended users. This is why the EyeCue team collects, plans, and
+              delivers new features and requirements based on the feedback from
+              you and your users every 2 weeks.
               <br />
               <br />
-              Aliquam erat purus, pharetra in eleifend commodo, auctor dignissim
-              est. Nam ultrices pulvinar nulla quis ultrices. Integer aliquet
-              imperdiet ex, nec tempus sapien vestibulum eget.
-              <br />
-              <br />
-              Fusce eu condimentum nunc, vel iaculis mi. Phasellus aliquam a
-              velit in feugiat. Sed fringilla, lorem ac hendrerit porttitor,
-              nisi mi ullamcorper ligula, sed cursus ligula tellus vel tortor.
+              This agile product calibration both validates your decisions and
+              promotes champions for your product. By having a rapid development
+              cycle, you will never have to worry about falling behind your
+              competitors for the critical releases.
             </div>
           </div>
         </div>

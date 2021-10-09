@@ -124,14 +124,14 @@ function MobileMenu(props) {
                 </div>
               </div>
             </Link>
-            <Link to="/blog">
+            <a href="https://www.eyecuelab.com/blog/">
               <div className={styles.navItemBlock}>
                 <div className={styles.navItem}>Insights</div>
                 <div className={styles.description}>
                   Let's build something amazing.
                 </div>
               </div>
-            </Link>
+            </a>
           </animated.div>
           <Dropdown
             activeNavItem={activeNavItem}

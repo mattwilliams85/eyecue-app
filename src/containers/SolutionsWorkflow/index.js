@@ -2,7 +2,7 @@ import React from 'react';
 import TopNav from 'components/TopNav';
 import Icons from 'components/sections/Icons';
 import ImageDetails from 'components/sections/ImageDetails';
-import ChooseSolutions from 'components/sections/ChooseSolutions';
+import Logos from 'components/sections/Logos';
 import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
@@ -60,28 +60,28 @@ function SolutionsMl() {
       />
       <ImageDetails
         image={screenshot1}
-        title={'Natural Language + Robotic Processing Automation'}
+        title={'Eliminate manual scheduling complexity'}
         copy={
-          'To create an AI-assisted tool that can summarize over 32 million publications into a human-digestable search space, the EyeCue team deploys Robotic Automation Processing to extract the text and Natural Language Processing to detect the intent of each publication.'
+          'The EyeCue team translates the highly intensive human scheduling and logging tasks into an automated workflow to modernize one of the oldest gig-economy, construction flagging. Like Uber and Doordash, workers may now answer to a job automatically determined by hours, certifications, and seniority.'
         }
       />
       <ImageDetails
         image={screenshot2}
-        title={'Computer Vison + Prediction Model'}
+        title={'Expedite scientific research with workflow automation'}
         isImageRight
         copy={
-          'To expedite solar panel instllation process, the EyeCue team implements computer vision to detect roof structure, inclination, and extract roof areas from aerial satellite images. By collecting the cost of labor and installation and the utility consumption pattern from the homeowners, the application also creates a 10, 15, 20, and 25-year statistical forecast to illustrate the long-term economical impact of the installation'
+          'Experimental design can be challenging. From designing a panel to coordinating with colleagues, from finding old data to re-entering the same information in multiple systems, the process of generating high-quality results can be time-consuming. The EyeCue team deploys workflow automation to guide data collection, manage lab equipment connection, and help step through analysis.'
         }
         backgroundColor={'white'}
       />
       <ImageDetails
         image={screenshot3}
-        title={'Cluster Analysis + Social Trend Detection'}
+        title={'Optimize sales without scaling the manual labor'}
         copy={
-          'Making relevant recommendation is hard. Using machine learnign methods, EyeCue can identifies micro-niches of similar users based on their tastes and preferences. When one user experiences something positive, the system automatically shares the experience with other people in the same niche.'
+          'In a niche marketplace where sellers act as a network to fulfill the diverse needs of buyers, the EyeCue team introduces a portal that distills the noise of manual tracking into a stage-based fulfillment workflow platform. Not only does it consolidates complex multi-tiered communication, but it also empowered sellers to do what they couldn’t before - provide better services to their customers without needing to scale up more human operators.'
         }
       />
-      <ChooseSolutions />
+      <Logos withPadding />
       <Contact />
       <Footer />
     </>

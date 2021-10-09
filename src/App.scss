@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #555;
+  background-color: #f0f0f0;
   color: #292a2d;
   font-family: 'Lato';
   font-size: 18px;
@@ -60,4 +60,25 @@ blockquote, q {
 a {
 	color: black;
 	text-decoration: none;
+}
+dl li {
+  list-style-type: none;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 20px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: 15px;
+		height: 10px;
+		width: 10px;
+		background-color: #4C5B6D;
+	}
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
 }

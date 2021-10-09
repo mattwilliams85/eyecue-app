@@ -9,7 +9,6 @@ import pageFade from 'images/screenshot_fade.png';
 import Slant from 'components/Slant';
 
 function Screenshots2({ company, author, quoteBackground, screenshots = {} }) {
-  console.log(quoteBackground);
   return (
     <div className={styles.container}>
       <Slant customStyle={{ top: '-210px ' }} inverted />

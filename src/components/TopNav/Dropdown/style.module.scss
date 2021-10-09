@@ -162,8 +162,12 @@
 .button {
   @include learnButton(150px);
   color: white;
-
   margin-top: 40px;
+
+  &.active {
+    background-color: white;
+    color: black;
+  }
 }
 
 .slant {
