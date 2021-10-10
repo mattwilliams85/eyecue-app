@@ -29,8 +29,8 @@
 .header {
   @include header;
 
-  font-size: 103px;
-  line-height: 107px;
+  font-size: 71px;
+  line-height: 74px;
 }
 
 .subheader {
@@ -58,9 +58,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 0px;
   max-width: 750px;
-  padding-top: 120px;
+  padding-top: 40px;
 
   img {
     height: 70px;
@@ -85,6 +85,18 @@
 }
 
 @media (min-width: $screen-sm-min) {
+  .header {
+    font-size: 103px;
+    line-height: 107px;
+  }
+
+  .icons {
+    padding-top: 120px;
+    gap: 40px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
   .layout {
     flex-direction: row;
   }

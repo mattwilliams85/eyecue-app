@@ -6,7 +6,9 @@ function Contact() {
     <div className={styles.container}>
       <div className={styles.layout}>
         <div className={styles.header}>Let's Build Something Amazing</div>
-        <div className={styles.button}>contact eyecue</div>
+        <a className={styles.button} href="mailto:hello@eyecuelab.com">
+          contact eyecue
+        </a>
       </div>
     </div>
   );

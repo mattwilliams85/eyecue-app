@@ -54,7 +54,7 @@ function LeftRightLeft() {
           <img src={graph3} alt="venn diagram" className={styles.graph} />
           <div>
             <div className={styles.title}>
-              End-user Centric Product Development
+              End-user Centric Product Development
             </div>
             <div className={styles.body}>
               EyeCue measures the impact of innovation by the scope of the

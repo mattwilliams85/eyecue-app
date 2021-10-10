@@ -78,7 +78,7 @@ function SolutionsMl() {
       />
       <ImageDetails
         image={screenshot3}
-        title={'Cluster Analysis + Social Trend Detection'}
+        title={'Cluster Analysis + Social Trend Detection'}
         copy={
           'Making relevant recommendation is hard. Using machine learnign methods, EyeCue can identifies micro-niches of similar users based on their tastes and preferences. When one user experiences something positive, the system automatically shares the experience with other people in the same niche.'
         }

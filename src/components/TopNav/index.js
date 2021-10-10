@@ -66,10 +66,14 @@ function TopNav() {
             </a>
           </div>
           <div className={styles.flexWrap}>
-            <div className={styles.contact}>Contact Us</div>
+            <a className={styles.contact} href="mailto:hello@eyecuelab.com">
+              Contact Us
+            </a>
           </div>
           <div className={styles.mobileWrap}>
-            <img src={eyecuelogo} alt="logo" />
+            <Link to="/">
+              <img src={eyecuelogo} alt="logo" />
+            </Link>
             <div
               className={classnames(styles.hamburger, {
                 [styles.active]: isMobileMenuActive

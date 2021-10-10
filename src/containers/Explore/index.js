@@ -46,7 +46,7 @@ function Explore() {
         }}
       />
       <Showcase
-        title={`How AI reduced Research Time from 2 Years to 20 seconds`}
+        title={`How AI reduced Research Time from 2 Years to 20 seconds`}
         subheader={`EyeCue transforms years of scientific research experience into seconds with artificial intelligence.`}
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}

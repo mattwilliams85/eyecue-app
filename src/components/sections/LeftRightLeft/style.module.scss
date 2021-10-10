@@ -24,6 +24,7 @@
   background-image: linear-gradient(0deg, #5c96d8, #595cc5 90%);
   line-height: 50px;
   -webkit-text-fill-color: transparent;
+  margin-top: 70px;
 }
 
 .body {
@@ -36,6 +37,7 @@
 .graph {
   max-height: 530px;
   max-width: 550px;
+  width: 100%;
 }
 
 .middle {
@@ -55,8 +57,15 @@
     gap: 150px;
   }
 
+  .graph {
+    width: initial;
+  }
+
   .middle {
     order: 0;
   }
 
+  .title {
+    margin-top: 0px;
+  }
 }

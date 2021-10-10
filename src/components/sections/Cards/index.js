@@ -27,9 +27,9 @@ function Cards() {
                 <div className={styles.subject}>
                   AI-accelerated vaccine research
                 </div>
-                <a href="https://www.eyecuelab.com/blog/">
+                <Link to="/solutions-ml">
                   <div className={styles.button}>Learn More</div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -41,9 +41,9 @@ function Cards() {
                 <div className={styles.subject}>
                   Automation that 100x the valuation
                 </div>
-                <a href="https://www.eyecuelab.com/blog/">
+                <Link to="/solutions-workflow">
                   <div className={styles.button}>Learn More</div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -55,9 +55,9 @@ function Cards() {
                 <div className={styles.subject}>
                   When Salesforce is not good enough
                 </div>
-                <a href="https://www.eyecuelab.com/blog/">
+                <Link to="/solutions-partnership">
                   <div className={styles.button}>Learn More</div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

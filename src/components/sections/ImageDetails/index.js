@@ -32,21 +32,14 @@ function ImageDetails({
         }}
       />
       <div className={styles.layout}>
-        <div className={styles.row}>
+        <div className={styles.innerLayout}>
+          <div className={styles.title}>{title}</div>
           <div
-            className={classnames(styles.fill, {
-              [styles.left]: isImageRight
-            })}
+            className={styles.body}
+            dangerouslySetInnerHTML={createMarkup(copy)}
           />
-          <div>
-            <div className={styles.title}>{title}</div>
-            <div
-              className={styles.body}
-              dangerouslySetInnerHTML={createMarkup(copy)}
-            />
-            <div className={styles.moreDetails}>
-              More Details <img src={iconArrow} alt="arrow" />
-            </div>
+          <div className={styles.moreDetails}>
+            More Details <img src={iconArrow} alt="arrow" />
           </div>
         </div>
       </div>

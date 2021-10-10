@@ -2,26 +2,20 @@
 
 .container {
   background: #f4f4f4;
-  height: 800px;
-  padding-bottom: 40px;
   position: relative;
-
-  &.large {
-    height: 1000px;
-  }
+  flex-direction: column;
+  display: flex;
 }
 
 .layout {
-  @include layout;
-  padding-top: 150px;
+  padding: 70px 0;
+  display: flex;
+  width: 100%;
 }
 
-.row {
-  align-items: center;
-  display: flex;
-  flex: 50%;
-  gap: 150px;
-  margin-bottom: 75px;
+.innerLayout {
+  max-width: 550px;
+  padding: 0 40px;
 }
 
 .title {
@@ -43,23 +37,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50%;
-
-  &.right {
-    left: initial;
-    right: 0;
-  }
-}
-
-.fill {
-  min-width: 50%;
-
-  &.left {
-    order: 1;
-  }
+  width: 100%;
+  min-height: 400px;
+  background-position: center;
 }
 
 .moreDetails {
@@ -69,5 +49,40 @@
   img {
     margin-left: 8px;
     margin-top: 75px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .image {
+    min-height: 700px;
+  }
+
+  .layout {
+    padding: 150px 0;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .container {
+    flex-direction: row;
+    height: 840px;
+
+    &.large {
+      height: 1000px;
+    }
+  }
+
+  .layout {
+    padding: 150px 0 0;
+    justify-content: center;
+  }
+
+  .image {
+    min-height: initial;
+    background-position: initial;
+
+    &.right {
+      order: 1;
+    }
   }
 }
