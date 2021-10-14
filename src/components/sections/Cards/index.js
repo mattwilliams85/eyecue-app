@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './style.module.scss';
-import deviceBd from 'images/device-bd.png';
-import devicePowur from 'images/device-powur.png';
-import deviceFlowjo from 'images/device-flowjo.png';
-import { Link } from 'react-router-dom';
+import deviceBd from 'images/device_bd.png';
+import devicePowur from 'images/device_salesforce.png';
+import deviceFlowjo from 'images/device_flowjo.png';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Cards() {
   return (
@@ -27,13 +27,13 @@ function Cards() {
                 <div className={styles.subject}>
                   AI-accelerated vaccine research
                 </div>
-                <Link to="/solutions-ml">
+                <Link smooth to="/explore#learn-more">
                   <div className={styles.button}>Learn More</div>
                 </Link>
               </div>
             </div>
             <div className={styles.card}>
-              <img src={devicePowur} alt="device-powur" />
+              <img src={deviceFlowjo} alt="device-powur" />
               <div className={styles.group}>
                 <div className={styles.company}>
                   Powur | Marketplace, Automation
@@ -41,13 +41,13 @@ function Cards() {
                 <div className={styles.subject}>
                   Automation that 100x the valuation
                 </div>
-                <Link to="/solutions-workflow">
+                <Link smooth to="startups/#learn-more">
                   <div className={styles.button}>Learn More</div>
                 </Link>
               </div>
             </div>
             <div className={styles.card}>
-              <img src={deviceFlowjo} alt="device-flowjo" />
+              <img src={devicePowur} alt="device-flowjo" />
               <div className={styles.group}>
                 <div className={styles.company}>
                   FlowJo | Order Management, ERP
@@ -55,7 +55,7 @@ function Cards() {
                 <div className={styles.subject}>
                   When Salesforce is not good enough
                 </div>
-                <Link to="/solutions-partnership">
+                <Link smooth to="/enterprise#learn-more">
                   <div className={styles.button}>Learn More</div>
                 </Link>
               </div>

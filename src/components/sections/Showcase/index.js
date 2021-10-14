@@ -17,6 +17,7 @@ function Showcase({
 
   return (
     <div
+      id="learn-more"
       className={styles.container}
       style={{ color: darkMode ? 'black' : 'white' }}
     >

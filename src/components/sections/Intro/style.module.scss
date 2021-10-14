@@ -87,10 +87,6 @@
   transition: background-color 0s;
   width: 80px;
 
-  &:first-child {
-    width: 185px;
-  }
-
   &.active {
     background: white;
     transition: background-color 0.3s;
@@ -110,7 +106,7 @@
 }
 
 .active:first-child .progressBarInner {
-  animation: progress 10s linear forwards;
+  animation: progress 5s linear forwards;
 }
 
 .barTitle {
@@ -118,6 +114,17 @@
   font-weight: bold;
   margin-top: 20px;
   text-align: left;
+  position: relative;
+
+  div {
+    position: absolute;
+    left: 0;
+    // animation: slideLeft 0.5s;
+
+    &:nth-child(1) {
+      animation: slideLeft 5s ease-in-out infinite;
+    }
+  };
 }
 
 .mobileOnly {
@@ -135,12 +142,6 @@
     height: 500px;
     left: 240px;
     top: 80px;
-  }
-}
-
-@keyframes progress {
-  to {
-    width: 100%;
   }
 }
 
@@ -184,5 +185,31 @@
 
   .barGroup {
     display: flex;
+  }
+}
+
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 }

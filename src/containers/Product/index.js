@@ -12,7 +12,7 @@ import Contact from 'components/sections/Contact';
 import Footer from 'components/Footer';
 
 import TitleBg from 'images/title_bg6.jpg';
-import ShowcaseDevice from 'images/laptop_1.png';
+import ShowcaseDevice from 'images/laptop_2.png';
 import ShowcaseBackground from 'images/texture_bg5.jpg';
 import fade from 'images/case-study-main.png';
 import page1 from 'images/case-study-sub1.png';

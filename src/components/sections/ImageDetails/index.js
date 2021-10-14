@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './style.module.scss';
 import classnames from 'classnames';
 
-import iconArrow from 'images/icon-arrow.png';
+// import iconArrow from 'images/icon-arrow.png';
 
 function ImageDetails({
   backgroundColor,
@@ -38,9 +38,9 @@ function ImageDetails({
             className={styles.body}
             dangerouslySetInnerHTML={createMarkup(copy)}
           />
-          <div className={styles.moreDetails}>
+          {/* <div className={styles.moreDetails}>
             More Details <img src={iconArrow} alt="arrow" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

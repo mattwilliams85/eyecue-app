@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import classnames from 'classnames';
+import Slant from 'components/Slant';
 
 import page1 from 'images/page_1.png';
 import page2 from 'images/page_2.png';
@@ -8,6 +9,7 @@ import page2 from 'images/page_2.png';
 function Screenshots() {
   return (
     <div className={styles.container}>
+      <Slant customStyle={{ top: '-210px', zIndex: 0 }} inverted />
       <div className={styles.layout}>
         <img
           className={classnames(styles.page, styles.left)}

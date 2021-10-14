@@ -5,11 +5,13 @@ import { useSpring, animated } from 'react-spring';
 
 import phone1 from 'images/phone-powur-1.png';
 import phone2 from 'images/phone-powur-2.png';
-import laptop from 'images/laptop_1.png';
-import tablet from 'images/tablet_1.png';
+import laptop1 from 'images/laptop_1.png';
+import laptop2 from 'images/laptop_2.png';
+import tablet2 from 'images/tablet_2.png';
 
 function Intro() {
   const [activeBar, setActiveBar] = useState(1);
+  const [quoteText, setQuoteText] = useState('Powur | Marketplace, Automation');
   const defaultSpringProps = {
     transform: `translateY(-50vh)`,
     opacity: 0,
@@ -35,37 +37,35 @@ function Intro() {
   const [springProps4, setSpringProps4] = useSpring(() => defaultSpringProps);
 
   useEffect(() => {
-    setTimeout(
-      () => {
-        activeBar === 4 ? setActiveBar(0) : setActiveBar(activeBar + 1);
-        if (activeBar === 1) {
-          setSpringProps1(leaveSpringProps);
-          setSpringProps2(enterSpringProps);
-        } else if (activeBar === 2) {
-          setSpringProps2(leaveSpringProps);
-          setSpringProps3(enterSpringProps);
-        } else if (activeBar === 3) {
-          setSpringProps3(leaveSpringProps);
-          setSpringProps4(enterSpringProps);
-        } else if (activeBar === 4) {
-          setSpringProps4(leaveSpringProps);
-          setSpringProps1(defaultSpringProps);
-          setSpringProps2(defaultSpringProps);
-          setSpringProps3(defaultSpringProps);
-        } else {
-          setSpringProps1(enterSpringProps);
-        }
-      },
-      activeBar === 1 ? 10000 : 5000
-    );
+    setTimeout(() => {
+      activeBar === 4 ? setActiveBar(0) : setActiveBar(activeBar + 1);
+      if (activeBar === 1) {
+        setQuoteText('FlowJo | Supply Chain, ERP');
+        setSpringProps1(leaveSpringProps);
+        setSpringProps2(enterSpringProps);
+      } else if (activeBar === 2) {
+        setQuoteText('Knox | SaaS, Product Discovery');
+        setSpringProps2(leaveSpringProps);
+        setSpringProps3(enterSpringProps);
+      } else if (activeBar === 3) {
+        setQuoteText('BDRC | Multi-Cloud, Machine Learning');
+        setSpringProps3(leaveSpringProps);
+        setSpringProps4(enterSpringProps);
+      } else if (activeBar === 4) {
+        setQuoteText('');
+        setSpringProps4(leaveSpringProps);
+        setSpringProps1(defaultSpringProps);
+        setSpringProps2(defaultSpringProps);
+        setSpringProps3(defaultSpringProps);
+      } else {
+        setQuoteText('Powur | Marketplace, Automation');
+        setSpringProps1(enterSpringProps);
+      }
+    }, 5000);
   }, [activeBar]); // eslint-disable-line
 
   useEffect(() => {
     setSpringProps1(enterSpringProps);
-
-    window.addEventListener('focus', () => {
-      // window.location.reload(false);
-    });
   }, []); // eslint-disable-line
 
   return (
@@ -117,7 +117,10 @@ function Intro() {
               </div>
             </div>
             <div className={styles.barTitle}>
-              Powur | Marketplace, Automation
+              <div>{quoteText}</div>
+              {/* <div>Powur | Marketplace, Automation</div>
+              <div>Powur | Marketplace, Automation</div>
+              <div>Powur | Marketplace, Automation</div> */}
             </div>
           </div>
           <animated.div
@@ -143,7 +146,7 @@ function Intro() {
           >
             <img
               className={classnames(styles.device, styles.laptop)}
-              src={laptop}
+              src={laptop1}
               alt="laptop"
             ></img>
           </animated.div>
@@ -155,9 +158,9 @@ function Intro() {
             }}
           >
             <img
-              className={classnames(styles.device, styles.tablet)}
-              src={tablet}
-              alt="tablet"
+              className={classnames(styles.device, styles.laptop)}
+              src={laptop2}
+              alt="laptop"
             ></img>
           </animated.div>
           <animated.div
@@ -167,12 +170,11 @@ function Intro() {
               transform: springProps4.transform
             }}
           >
-            <img className={styles.device} src={phone1} alt="phone1" />
             <img
-              className={classnames(styles.device, styles.phone)}
-              src={phone2}
-              alt="phone2"
-            />
+              className={classnames(styles.device, styles.tablet)}
+              src={tablet2}
+              alt="tablet"
+            ></img>
           </animated.div>
         </div>
       </div>

@@ -36,21 +36,19 @@ export const COPY = {
       {
         mobileTitle: `ML Applications`,
         title: `AI-Assisted & ML Applications`,
-        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse finibus mauris at justo egestas congue.`,
+        body: `Spark creativity and improve productivity through meaningful insights.`,
         url: 'solutions-ml'
       },
       {
         mobileTitle: `Work Automation`,
         title: `Work Automation & Workflow Design`,
-        body: `Mauris in neque hendrerit, finibus nisi sagittis, elementum
-        nulla.`,
+        body: `Reduce error and increase satisfaction by eliminating repetitive tasks.`,
         url: 'solutions-workflow'
       },
       {
         mobileTitle: `Strategic Partnership`,
         title: `Enterprise Strategic Partnership`,
-        body: `Vivamus dapibus magna sit amet mauris ullamcorper, nec congue
-        libero sodales.`,
+        body: `High impact partnerships that augment your product innovations.`,
         url: 'solutions-partnership'
       }
     ]
