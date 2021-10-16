@@ -51,11 +51,16 @@ function Explore() {
         background={ShowcaseBackground}
         deviceImg={ShowcaseDevice}
         deviceStyles={
-          !isDesktop ? { top: '-340px', width: '100%', left: '0px' } : undefined
+          !isDesktop
+            ? { top: '-400px', width: '400px', left: '0px' }
+            : undefined
         }
         copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2
+        body={`EyeCue is my go-to for development projects for the last decade
+        because they are trusted, provide fair pricing and their code simply
+        works and scales.`}
         author={'Howie Seay'}
         company={'BD, Senior Product Manager'}
         quoteBackground={quoteBackground}

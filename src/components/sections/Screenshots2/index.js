@@ -8,10 +8,16 @@ import page3 from 'images/screenshot_6.png';
 import pageFade from 'images/screenshot_fade.png';
 import Slant from 'components/Slant';
 
-function Screenshots2({ company, author, quoteBackground, screenshots = {} }) {
+function Screenshots2({
+  company,
+  body,
+  author,
+  quoteBackground,
+  screenshots = {}
+}) {
   return (
     <div className={styles.container}>
-      <Slant customStyle={{ top: '-210px ' }} inverted />
+      <Slant customStyle={{ top: '-210px', height: '210px' }} inverted />
       <div className={styles.layout}>
         <img
           className={classnames(styles.page, styles.fade)}
@@ -39,12 +45,7 @@ function Screenshots2({ company, author, quoteBackground, screenshots = {} }) {
             backgroundImage: quoteBackground && `url(${quoteBackground})`
           }}
         >
-          <div className={styles.body}>
-            You guys are the real deal and we really appreciate the extra work
-            and long hours. I can’t wait to calculate the token savings
-            comparisons between the legacy system and Hub. Going to be mind
-            blowing.
-          </div>
+          <div className={styles.body}>{body}</div>
           <div className={styles}>{author}</div>
           <div className={styles}>{company}</div>
         </div>

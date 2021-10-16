@@ -52,11 +52,13 @@ function Intrapreneur() {
                 width: '750px',
                 left: '550px'
               }
-            : { top: '-240px', width: '100%', left: '0px' }
+            : { top: '-320px', width: '450px', left: '0px' }
         }
         copy={SHOWCASE_COPY.showcase.intrapreneur}
       />
       <Screenshots2
+        body={`You guys are the real deal and we really appreciate the extra work and long hours.
+        I can't wait to calculate the token savings comparisons bdtween the legacy system and Hub. Going to be mind blowing.`}
         author={'James Kidwell'}
         company={'FlowJo, Director of Sales'}
         quoteBackground={QuoteBackground}

@@ -51,17 +51,20 @@ function Product() {
         deviceStyles={
           isDesktop
             ? {
-                top: '-130px',
+                top: '-70px',
                 width: '750px',
-                left: '550px'
+                left: '600px',
+                maxWidth: '750px'
               }
-            : { top: '-240px', width: '100%', left: '0px' }
+            : { top: '-310px', width: '500px', left: '0px' }
         }
         copy={SHOWCASE_COPY.showcase.explore}
       />
       <Screenshots2
-        author={'James Kidwell'}
-        company={'FlowJo, Director of Sales'}
+        body={`EyeCue is my go-to for development projects for the last decade because they are trusted,
+        provide fair pricing and their code simply works and scales.`}
+        author={'Josh Levine'}
+        company={'Knox, Advisor'}
         screenshots={{
           fade,
           page1,

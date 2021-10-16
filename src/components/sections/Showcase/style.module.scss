@@ -51,11 +51,14 @@
 
 .tabletImg {
   right: 0;
-  z-index: 1;
   position: absolute;
-  width: 100%;
-  top: -350px;
+  z-index: 2;
+  width: 400px;
+  top: -410px;
   max-width: 681px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .containerBackground {
@@ -74,6 +77,9 @@
   .tabletImg {
     display: block;
     left: 650px;
+    top: -120px;
+    right: unset;
+    margin: unset;
   }
 
   .bodyWrap {

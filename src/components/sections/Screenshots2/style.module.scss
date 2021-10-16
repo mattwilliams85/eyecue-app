@@ -36,7 +36,6 @@
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  height: 525px;
   justify-content: center;
   left: 0;
   padding: 40px;
@@ -67,6 +66,7 @@
   }
 
   .rectangle {
+    height: 525px;
     left: 20px;
     width: 360px;
   }

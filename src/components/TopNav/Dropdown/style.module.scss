@@ -96,6 +96,7 @@
 
 .overlay {
   @include overlay;
+  z-index: 2;
 }
 
 .dropdown {
