@@ -1,17 +1,15 @@
 @import '~styles/mixins.scss';
 
 .container {
-  height: 1280px;
+  height: 350px;
   position: relative;
 }
 
 .layout {
   @include layout;
-  position: relative;
 }
 
 .page {
-  max-width: 675px;
   position: absolute;
   z-index: 1;
 }
@@ -28,6 +26,10 @@
   width: 100vw;
 }
 
+.top, .fade, .right {
+  display: none;
+}
+
 .rectangle {
   background-image: url('~images/rectangle_2.png');
   color: white;
@@ -41,7 +43,7 @@
   padding: 40px;
   position: absolute;
   text-align: left;
-  top: 110px;
+  bottom: 0;
   z-index: 3;
   width: 100%;
 }
@@ -53,6 +55,20 @@
 }
 
 @media (min-width: $screen-sm-min) {
+  .container {
+    height: 700px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .container {
+    height: 1280px;
+  }
+
+  .layout {
+    position: relative;
+  }
+
   .left {
     left: 75px;
     top: 560px;
@@ -72,13 +88,16 @@
   }
 
   .top {
-    display: block;
     right: 200px;
     top: 0;
   }
 
-  .fade {
+  .top, .fade, .right {
     display: block;
+  }
+
+
+  .fade {
     left: 0;
     max-width: 100vw;
     position: relative;
@@ -88,6 +107,15 @@
 
   .left, .top {
     display: none;
+  }
+
+  .rectangle {
+    bottom: unset;
+    top: 110px;
+  }
+
+  .page {
+    max-width: 675px;
   }
 }
 

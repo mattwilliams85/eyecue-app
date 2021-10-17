@@ -21,6 +21,7 @@
 
 .block {
   padding-top: 80px;
+  text-align: center;
 
   &:last-child {
     background-image: none;
@@ -47,12 +48,14 @@
 
   font-size: 36px;
   line-height: 36px;
+  margin: 0 auto 20px;
   max-width: 200px;
 }
 
 .body {
   color: #bbbbbb;
   font-size: 18px;
+  max-width: 400px;
 }
 
 .learnmore {
@@ -67,6 +70,7 @@
 @media (min-width: $screen-sm-min) {
   .block {
     max-width: 365px;
+    text-align: left;
   }
 
   .row {
@@ -80,6 +84,10 @@
 
   .allLinks .block {
     max-width: 260px;
+  }
+
+  .title {
+    margin: 0 0 20px 0;
   }
 }
 

@@ -1,7 +1,7 @@
 @import '~styles/mixins';
 
 .container {
-  background: url('~images/texture_bg.png');
+  background: url('~images/texture_bg3.jpg');
   background-position: 0 -1px;
   background-size: cover;
   box-sizing: border-box;
@@ -37,7 +37,11 @@
   max-width: 680px;
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-md-min) {
+  .container {
+    background: url('~images/texture_bg.png');
+  }
+
   .layout {
     padding-top: 235px;
   }

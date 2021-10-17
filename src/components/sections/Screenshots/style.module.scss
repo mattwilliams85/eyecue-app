@@ -1,13 +1,12 @@
 @import '~styles/mixins.scss';
 
 .container {
-  height: 1280px;
+  height: 600px;
   position: relative;
 }
 
 .layout {
   @include layout;
-  position: relative;
 }
 
 .page {
@@ -24,6 +23,7 @@
   right: 0px;
   top: 600px;
   width: 100vw;
+  display: none;
 }
 
 .rectangle {
@@ -39,7 +39,7 @@
   padding: 40px;
   position: absolute;
   text-align: left;
-  top: 110px;
+  bottom: 0px;
   width: 100%;
 }
 
@@ -50,28 +50,46 @@
 }
 
 @media (min-width: $screen-sm-min) {
+  .container {
+    height: 900px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .container {
+    height: 1280px;
+  }
+
   .left {
-    display: none;
     left: 175px;
     top: -220px;
+    display: none;
     width: initial;
   }
 
   .right {
-    right: 0;
+    display: block;
+    right: 100px;
     top: -340px;
-    width: initial;
+    width: 70%;
   }
 
   .rectangle {
     height: 525px;
     left: 20px;
     width: 360px;
+    top: 110px;
+    bottom: unset;
   }
 }
 
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-lg-min) {
   .left {
     display: block;
+  }
+
+  .right {
+    width: initial;
+    right: 0;
   }
 }
